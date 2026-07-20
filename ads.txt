@@ -1,0 +1,8 @@
+# AdSense approval hone ke baad, Google tumhe ek Publisher ID dega (jaise pub-1234567890123456)
+# Us ID ko neeche wali line me "pub-XXXXXXXXXXXXXXXX" ki jagah daal do, aur
+# is file ka naam "ads.txt" rakh ke apni website ke root folder me daal do
+# (index.html ke sath wali jagah — https://arcave-academy.vercel.app/ads.txt pe khulna chahiye)
+#
+# Abhi ke liye ye file adhoori hai — jab tak Publisher ID nahi bharoge, isse koi fayda nahi hoga.
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
