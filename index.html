@@ -266,20 +266,32 @@
   .stat-box .num{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:28px; color:var(--marigold);}
   .stat-box .label{font-size:12px; color:var(--sand-light); margin-top:4px;}
 
-  /* ---------- TESTIMONIALS ---------- */
-  .testi-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;}
-  .testi-card{
-    background:rgba(255,255,255,0.04); border:1px solid rgba(232,163,61,0.15); border-radius:14px; padding:22px;
-  }
-  .testi-stars{color:var(--marigold); font-size:14px; margin-bottom:10px;}
-  .testi-card p{font-size:14px; color:var(--sand-light); margin-bottom:16px; line-height:1.55;}
-  .testi-person{display:flex; align-items:center; gap:10px;}
-  .testi-avatar{
-    width:38px; height:38px; border-radius:50%; background:var(--indigo-700); color:var(--marigold);
-    display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'Rajdhani',sans-serif; flex-shrink:0;
-  }
-  .testi-person b{display:block; font-size:13.5px; color:var(--paper);}
-  .testi-person span{font-size:11.5px; color:var(--sand);}
+  /* --------- TESTIMONIALS --------- */
+.testi-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;}
+.testi-card{
+  background:rgba(255,255,255,0.04); 
+  border:1px solid rgba(255,215,0,0.15); 
+  padding:16px; 
+  border-radius:12px;
+}
+.testi-stars{color:var(--marigold); font-size:14px; margin-bottom:8px;}
+.testi-card p{font-size:14px; color:var(--sand-light); line-height:1.5;}
+.testi-person{display:flex; align-items:center; gap:12px; margin-top:12px;}
+.testi-avatar{
+  width:38px; height:38px; border-radius:50%; background:var(--indigo-700);
+  display:flex; align-items:center; justify-content:center; font-weight:bold;
+}
+.testi-person b{display:block; font-size:13.5px; color:var(--sand-gold);}
+.testi-person span{font-size:11.5px; color:var(--sand);}
+
+/* LIGHT MODE FIX FOR REVIEWS & STATS */
+[data-theme="light"] .testi-card { background:#ffffff !important; border:1px solid #dcd6c8 !important; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
+[data-theme="light"] .testi-card p { color:#1a1a1a !important; font-weight:500; }
+[data-theme="light"] .testi-person b { color:#0b1f3a !important; font-weight:700; }
+[data-theme="light"] .testi-person span { color:#444444 !important; }
+[data-theme="light"] .stat-box { background:#ffffff !important; border:1px solid #dcd6c8 !important; }
+[data-theme="light"] .stat-box .num { color:#b3872a !important; font-weight:800; }
+[data-theme="light"] .stat-box .label { color:#222222 !important; font-weight:600; }
 
   /* ---------- TERMS & CONDITIONS MODAL ---------- */
   .terms-overlay{
