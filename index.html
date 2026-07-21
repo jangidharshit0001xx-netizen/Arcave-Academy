@@ -2132,13 +2132,14 @@ async function startCoursePayment(course){
   // seedha client se payment confirm karke unlock kar rahe hain. Blaze plan lete hi
   // ise phir se server-verified flow (createCourseOrder + verifyAndUnlockCourse) pe shift karna.
   const options = {
-    key: RAZORPAY_KEY_ID,
-    amount: (course.price || 49) * 100,
-    currency: "INR",
-    name: "Arcave Academy",
-    description: course.name + " — 1 वर्ष एक्सेस",
-    prefill: { email: user.email, name: user.displayName || '' },
-    theme: { color: "#0d2b28" },
+      key: RAZORPAY_KEY_ID,
+      amount: (course.price || 49) * 100,
+      currency: "INR",
+      auto_capture: true,
+      name: "Arcave Academy",
+      description: course.name + " - 1 वर्ष एक्सेस",
+      prefill: { email: user.email, name: user.displayName },
+      theme: { color: "#0d2b28" },
     handler: async function(response){
       try{
         const purchasedAt = Date.now();
