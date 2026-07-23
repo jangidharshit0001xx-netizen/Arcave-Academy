@@ -1,0 +1,8 @@
+{
+  "name": "arcave-academy",
+  "private": true,
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "razorpay": "^2.9.4"
+  }
+}
