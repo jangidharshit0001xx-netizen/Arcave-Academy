@@ -2321,7 +2321,7 @@ async function startCoursePayment(course){
     orderData = await res.json();
   }catch(e){
     console.error(e);
-    alert('पेमेंट अभी उपलब्ध नहीं है (सर्वर सेटअप बाकी है)। कृपया थोड़ी देर बाद कोशिश करें या एडमिन से संपर्क करें।');
+    alert('पेमेंट एरर: ' + (e.message || e));
     return;
   }
 
