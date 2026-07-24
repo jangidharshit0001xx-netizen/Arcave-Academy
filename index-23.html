@@ -1,0 +1,3540 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<title>Arcave Academy | RSSB, RPSC व राजस्थान परीक्षा तैयारी</title>
+<meta name="description" content="Arcave Academy — RSSB LDC, RPSC और राजस्थान की सभी प्रतियोगी परीक्षाओं की तैयारी के लिए मुफ्त MCQ प्रैक्टिस, करंट अफेयर्स और प्रीमियम कोर्स। राजस्थान इतिहास, भूगोल, संस्कृति के सवाल हिंदी में।">
+<meta name="keywords" content="RSSB LDC, RPSC, राजस्थान इतिहास, राजस्थान GK, राजस्थान MCQ, Rajasthan GK, Rajasthan competitive exam, Arcave Academy, राजस्थान करंट अफेयर्स">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://arcave-academy.vercel.app/">
+<meta property="og:title" content="Arcave Academy | RSSB, RPSC राजस्थान परीक्षा तैयारी">
+<meta property="og:description" content="राजस्थान की प्रतियोगी परीक्षाओं के लिए मुफ्त MCQ, करंट अफेयर्स और प्रीमियम कोर्स।">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://arcave-academy.vercel.app/icon-512.png">
+<meta property="og:url" content="https://arcave-academy.vercel.app/">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d2b28">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Arcave Academy">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.gstatic.com">
+<link rel="preconnect" href="https://firestore.googleapis.com">
+<link rel="preconnect" href="https://checkout.razorpay.com">
+<link rel="dns-prefetch" href="https://arcaveacademy.firebaseapp.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-functions-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-messaging-compat.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<style>
+  :root{
+    --indigo-900:#0b1f3a;
+    --indigo-800:#122c52;
+    --indigo-700:#1a3c6b;
+    --sand:#e3cd9a;
+    --sand-light:#f2e8d0;
+    --paper:#faf5e9;
+    --marigold:#d1a336;
+    --marigold-dark:#b3872a;
+    --ink-red:#9c3b32;
+    --ink:#1a1a1a;
+  }
+  [data-theme="light"] body{background:#eef4fb; color:var(--ink);}
+  [data-theme="light"]{
+    --marigold:#8a6216;
+    --marigold-dark:#6b4c10;
+  }
+  [data-theme="light"] header{background:rgba(238,244,251,0.98); border-bottom:1px solid #d6e4f5;}
+  [data-theme="light"] .logo-text{color:var(--ink);}
+  [data-theme="light"] nav a{color:#555;}
+  [data-theme="light"] .student-badge{color:#555;}
+  [data-theme="light"] .student-badge button{border-color:#ccc; color:#555;}
+  [data-theme="light"] .hamburger span{background:var(--ink);}
+  [data-theme="light"] .eyebrow{color:var(--marigold-dark);}
+  [data-theme="light"] .hero h1{color:var(--ink);}
+  [data-theme="light"] .hero p{color:#555;}
+  [data-theme="light"] .section-head h2{color:var(--ink);}
+  [data-theme="light"] .section-head p{color:#666;}
+  [data-theme="light"] .cat-card{background:#fff; border:1px solid #e2ddd0; box-shadow:0 2px 10px rgba(0,0,0,.04);}
+  [data-theme="light"] .cat-card h3{color:var(--ink);}
+  [data-theme="light"] .cat-card .count{color:#888;}
+  [data-theme="light"] .free-simple-row{background:#fff; border:1px solid #e2ddd0; box-shadow:0 4px 14px rgba(0,0,0,.06);}
+  [data-theme="light"] .free-simple-row h3{color:var(--ink);}
+  [data-theme="light"] .free-simple-row .meta{color:#777;}
+  [data-theme="light"] .premium-band{background:linear-gradient(135deg,#fdf6e8,#f7ecd0 45%,#fdf6e8);}
+  [data-theme="light"] .premium-card{
+    background:linear-gradient(160deg, rgba(255,255,255,0.92), rgba(255,255,255,0.75));
+    border-color:rgba(180,130,30,0.35); box-shadow:0 20px 50px rgba(0,0,0,.1);
+  }
+  [data-theme="light"] .premium-card h2{color:var(--ink);}
+  [data-theme="light"] .premium-card > div:first-child > p{color:#444;}
+  [data-theme="light"] .premium-feature-list li{color:#333;}
+  [data-theme="light"] .premium-price-box{background:rgba(255,255,255,0.7); border-color:rgba(180,130,30,0.3);}
+  [data-theme="light"] .premium-lock-note{color:#777;}
+  [data-theme="light"] .hero-visual{background:#fff; border:1px solid #e2ddd0; box-shadow:0 10px 30px rgba(0,0,0,.06);}
+  [data-theme="light"] .hero-visual-row{border-bottom-color:#eee;}
+  [data-theme="light"] .hero-visual-row .hv-text b{color:var(--ink);}
+  [data-theme="light"] .hero-visual-row .hv-text span{color:#777;}
+  [data-theme="light"] .stat-box{background:#fff; border:1px solid #e2ddd0; box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  [data-theme="light"] .stat-box .label{color:#666;}
+  [data-theme="light"] .testi-card{background:#fff; border:1px solid #e2ddd0; box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  [data-theme="light"] .testi-card p{color:#444;}
+  [data-theme="light"] .testi-person b{color:var(--ink);}
+  [data-theme="light"] .testi-person span{color:#777;}
+  [data-theme="light"] .ca-item{background:#fff; border:1px solid #e2ddd0; box-shadow:0 2px 10px rgba(0,0,0,.04);}
+  [data-theme="light"] .ca-item h3{color:var(--ink);}
+  [data-theme="light"] .ca-item p{color:#666;}
+  [data-theme="light"] .btn-outline{color:var(--ink); border-color:#ccc;}
+  [data-theme="light"] footer{color:#888; border-top-color:#e2ddd0;}
+  [data-theme="light"] .bottom-nav{background:rgba(238,244,251,0.97); border-top:1px solid #d6e4f5;}
+  [data-theme="light"] .bottom-nav button{color:#888;}
+  [data-theme="light"] .bottom-nav button.active{color:var(--marigold-dark);}
+  [data-theme="light"] .profile-card{background:#fff; border:1px solid #e2ddd0;}
+  [data-theme="light"] .history-row{background:#fbfaf7; border-color:#e2ddd0;}
+  [data-theme="light"] .premium-price-box .price span{color:#888;}
+  [data-theme="light"] .premium-price-box .price-sub{color:#777;}
+  [data-theme="light"] .paid-simple-card{background:#fff; border:1px solid #e2ddd0; box-shadow:0 4px 14px rgba(0,0,0,.06);}
+  [data-theme="light"] .paid-simple-card h2, [data-theme="light"] .paid-simple-card p{color:var(--ink);}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; touch-action:manipulation; -webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  body{
+    background:var(--indigo-900);
+    color:var(--paper);
+    font-family:'Hind',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Yatra One',cursive; font-weight:400; letter-spacing:0.5px;}
+  .stat,.numeral{font-family:'Rajdhani',sans-serif; font-weight:700;}
+  a{color:inherit;}
+  img{max-width:100%;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(15,37,71,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(232,163,61,0.25);
+  }
+  .nav-wrap{
+    max-width:1100px; margin:0 auto; padding:14px 20px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo .seal{
+    width:38px;height:38px;border-radius:50%;
+    border:2px solid var(--marigold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Yatra One',cursive; color:var(--marigold); font-size:18px;
+    flex-shrink:0;
+  }
+  .logo-text{font-family:'Yatra One',cursive; font-size:22px; color:var(--paper);}
+  .logo-text span{color:var(--marigold);}
+  .nav-right{display:flex; align-items:center; gap:18px;}
+  nav ul{list-style:none; display:flex; gap:26px;}
+  nav a{
+    text-decoration:none; color:var(--sand-light); font-weight:500; font-size:15px;
+    padding:6px 2px; border-bottom:2px solid transparent; transition:.2s;
+  }
+  nav a:hover{color:var(--marigold); border-bottom-color:var(--marigold);}
+  .hamburger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none;}
+  .hamburger span{width:24px; height:2px; background:var(--paper);}
+
+  @media(max-width:720px){
+    nav ul{
+      position:fixed; top:66px; right:0; height:calc(100vh - 66px); width:220px;
+      background:var(--indigo-800); flex-direction:column; padding:26px 22px; gap:22px;
+      transform:translateX(100%); transition:transform .3s ease; box-shadow:-4px 0 20px rgba(0,0,0,.3);
+    }
+    nav ul.open{transform:translateX(0);}
+    .hamburger{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    max-width:800px; margin:0 auto; padding:70px 20px 50px;
+    display:grid; grid-template-columns:1fr; gap:50px; align-items:center;
+  }
+  @media(max-width:860px){.hero{grid-template-columns:1fr; padding-top:40px;}}
+  .eyebrow{
+    color:var(--marigold); font-family:'Rajdhani',sans-serif; font-weight:600;
+    letter-spacing:3px; font-size:13px; text-transform:uppercase; margin-bottom:14px;
+  }
+  .hero h1{font-size:44px; line-height:1.25; color:var(--paper); margin-bottom:18px;}
+  .hero h1 em{font-style:normal; color:var(--marigold);}
+  .hero p{color:var(--sand-light); font-size:17px; max-width:480px; margin-bottom:26px;}
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:3px; text-decoration:none;
+    font-weight:600; font-size:15px; cursor:pointer; border:none; font-family:'Hind',sans-serif;
+    transition:.2s;
+  }
+  .btn-primary{background:var(--marigold); color:var(--indigo-900);}
+  .btn-primary:hover{background:var(--marigold-dark);}
+  .btn-outline{background:transparent; color:var(--paper); border:1.5px solid var(--sand);}
+  .btn-outline:hover{border-color:var(--marigold); color:var(--marigold);}
+
+  /* Daily Question Card - signature element */
+  /* Course slider — homepage */
+  .course-slider-wrap{position:relative; overflow:hidden; border-radius:8px; max-width:1100px; margin:0 auto;}
+  .course-slider{display:flex; transition:transform .6s ease;}
+  .course-slide{
+    min-width:100%; box-sizing:border-box; padding:28px 24px; text-align:center; cursor:pointer;
+    background:linear-gradient(135deg, var(--indigo-800), var(--indigo-700));
+    border:1px solid rgba(232,163,61,0.25); border-radius:8px;
+  }
+  .course-slide .emoji{font-size:34px; margin-bottom:8px;}
+  .course-slide h3{font-size:21px; color:var(--marigold); margin-bottom:6px;}
+  .course-slide p{color:var(--sand-light); font-size:14px;}
+  .slider-dots{display:flex; justify-content:center; gap:7px; margin-top:12px;}
+  .slider-dots .dot{width:7px; height:7px; border-radius:50%; background:var(--sand); opacity:.4; transition:.2s;}
+  .slider-dots .dot.active{opacity:1; background:var(--marigold); width:18px; border-radius:4px;}
+
+  /* ---------- HERO VISUAL PANEL (replaces old daily-question card) ---------- */
+  .hero-visual{
+    background:linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(232,163,61,0.3); border-radius:16px; padding:28px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35); position:relative; overflow:hidden;
+  }
+  .hero-visual::before{
+    content:''; position:absolute; top:-40px; right:-40px; width:160px; height:160px; border-radius:50%;
+    background:radial-gradient(circle, rgba(232,163,61,0.35), transparent 70%);
+  }
+  .hero-visual-title{font-family:'Rajdhani',sans-serif; font-weight:700; letter-spacing:1px; font-size:14px; color:var(--marigold); text-transform:uppercase; margin-bottom:18px;}
+  .hero-visual-row{display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);}
+  .hero-visual-row:last-child{border-bottom:none;}
+  .hero-visual-row .hv-icon{
+    width:42px; height:42px; border-radius:10px; background:rgba(232,163,61,0.15); color:var(--marigold);
+    display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0;
+  }
+  .hero-visual-row .hv-text b{display:block; color:var(--paper); font-size:14.5px; font-weight:600;}
+  .hero-visual-row .hv-text span{color:var(--sand); font-size:12.5px;}
+
+  /* ---------- SUBJECT CARDS (Free Test Series) — simple, no images ---------- */
+  .subject-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px;}
+  .free-simple-row{
+    position:relative; border-radius:10px; cursor:pointer; padding:18px 18px 20px;
+    background:rgba(255,255,255,0.04); border:1px solid rgba(232,163,61,0.18);
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .free-simple-row:hover{transform:translateY(-3px); border-color:var(--marigold);}
+  .free-simple-row h3{font-family:'Hind',sans-serif; font-size:16.5px; font-weight:600; color:var(--paper); margin-bottom:6px; line-height:1.3;}
+  .free-simple-row .meta{font-size:12.5px; color:var(--sand); margin-bottom:12px;}
+  .subject-card-start{
+    display:block; width:100%; text-align:center; background:var(--marigold); color:var(--indigo-900);
+    border:none; padding:9px 0; border-radius:8px; font-weight:700; font-size:13.5px; cursor:pointer; transition:.2s;
+  }
+  .subject-card-start:hover{background:var(--marigold-dark);}
+
+  .paid-simple-card{
+    background:var(--indigo-800); border:1px solid rgba(232,163,61,0.25);
+  }
+  .paid-simple-card h2{color:var(--paper);}
+  .paid-simple-card p{color:var(--sand-light);}
+
+  /* ---------- PREMIUM SECTION (Golden theme) ---------- */
+  .premium-band{background:linear-gradient(135deg,#2a1f08,#4a3510 45%,#2a1f08); position:relative; overflow:hidden;}
+  .premium-band::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(circle at 20% 20%, rgba(232,163,61,0.18), transparent 45%),
+               radial-gradient(circle at 80% 80%, rgba(232,163,61,0.12), transparent 45%);
+  }
+  .premium-card{
+    position:relative; z-index:1; max-width:1100px; margin:0 auto; border-radius:18px;
+    background:linear-gradient(160deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+    border:1px solid rgba(232,163,61,0.45); padding:38px 32px; display:grid; grid-template-columns:1.1fr 0.9fr; gap:30px; align-items:center;
+    box-shadow:0 30px 70px rgba(0,0,0,.4);
+  }
+  @media(max-width:780px){.premium-card{grid-template-columns:1fr;}}
+  .premium-tag{
+    display:inline-flex; align-items:center; gap:6px; background:rgba(232,163,61,0.15); color:var(--marigold);
+    font-size:12.5px; font-weight:700; letter-spacing:1px; padding:6px 14px; border-radius:20px; margin-bottom:14px;
+  }
+  .premium-card h2{font-size:28px; color:var(--paper); margin-bottom:10px; font-family:'Yatra One',cursive; font-weight:400;}
+  .premium-card > div:first-child > p{color:var(--sand-light); font-size:14.5px; margin-bottom:18px;}
+  .premium-feature-list{list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 16px; margin-bottom:22px;}
+  .premium-feature-list li{display:flex; align-items:center; gap:8px; font-size:13.5px; color:var(--sand-light);}
+  .premium-feature-list li b{color:var(--marigold); font-size:15px;}
+  .premium-price-box{
+    background:rgba(0,0,0,0.25); border:1px solid rgba(232,163,61,0.3); border-radius:14px; padding:26px; text-align:center;
+  }
+  .premium-price-box .offer-tag{color:#ff9d5c; font-weight:700; font-size:13px; margin-bottom:8px;}
+  .premium-price-box .price{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:46px; color:var(--marigold); line-height:1;}
+  .premium-price-box .price span{font-size:16px; color:var(--sand); font-weight:600; text-decoration:line-through; margin-left:8px;}
+  .premium-price-box .price-sub{font-size:12px; color:var(--sand); margin-top:4px;}
+  .btn-premium{
+    display:block; width:100%; margin-top:18px; background:linear-gradient(135deg,var(--marigold),#c78f2c);
+    color:var(--indigo-900); border:none; padding:14px 0; border-radius:10px; font-weight:700; font-size:15.5px;
+    cursor:pointer; box-shadow:0 10px 24px rgba(232,163,61,0.35); transition:.2s;
+  }
+  .btn-premium:hover{transform:translateY(-2px); box-shadow:0 14px 30px rgba(232,163,61,0.45);}
+  .premium-lock-note{font-size:11.5px; color:var(--sand); margin-top:10px;}
+
+  /* ---------- STATS BAND ---------- */
+  .stats-band{max-width:1100px; margin:0 auto; padding:0 20px 60px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  @media(max-width:720px){.stats-band{grid-template-columns:repeat(2,1fr);}}
+  .stat-box{
+    background:rgba(255,255,255,0.04); border:1px solid rgba(232,163,61,0.15); border-radius:12px;
+    padding:20px 14px; text-align:center;
+  }
+  .stat-box .num{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:28px; color:var(--marigold);}
+  .stat-box .label{font-size:12px; color:var(--sand-light); margin-top:4px;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testi-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;}
+  .testi-card{
+    background:rgba(255,255,255,0.04); border:1px solid rgba(232,163,61,0.15); border-radius:14px; padding:22px;
+  }
+  .testi-stars{color:var(--marigold); font-size:14px; margin-bottom:10px;}
+  .testi-card p{font-size:14px; color:var(--sand-light); margin-bottom:16px; line-height:1.55;}
+  .testi-person{display:flex; align-items:center; gap:10px;}
+  .testi-avatar{
+    width:38px; height:38px; border-radius:50%; background:var(--indigo-700); color:var(--marigold);
+    display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'Rajdhani',sans-serif; flex-shrink:0;
+  }
+  .testi-person b{display:block; font-size:13.5px; color:var(--paper);}
+  .testi-person span{font-size:11.5px; color:var(--sand);}
+
+  /* ---------- TERMS & CONDITIONS MODAL ---------- */
+  .terms-overlay{
+    display:none; position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.65);
+    align-items:center; justify-content:center; padding:20px;
+  }
+  .terms-overlay.active{display:flex;}
+  .terms-box{
+    background:var(--paper); color:var(--ink); border-radius:12px; max-width:480px; width:100%;
+    max-height:85vh; display:flex; flex-direction:column; box-shadow:0 30px 70px rgba(0,0,0,.5);
+  }
+  .terms-box-head{padding:22px 24px 12px; border-bottom:1px solid #e2ddd0;}
+  .terms-box-head h3{font-size:19px; color:var(--indigo-900); font-family:'Hind',sans-serif; font-weight:700;}
+  .terms-box-head p{font-size:12.5px; color:#777; margin-top:4px;}
+  .terms-box-body{padding:16px 24px; overflow-y:auto; flex:1;}
+  .terms-box-body h4{font-size:13.5px; color:var(--ink-red); margin:14px 0 6px;}
+  .terms-box-body h4:first-child{margin-top:0;}
+  .terms-box-body ul{padding-left:18px; margin-bottom:4px;}
+  .terms-box-body li{font-size:13.5px; line-height:1.7; margin-bottom:4px;}
+  .terms-check-row{
+    display:flex; align-items:flex-start; gap:10px; padding:14px 24px; border-top:1px solid #e2ddd0;
+    background:#fbfaf7;
+  }
+  .terms-check-row input{margin-top:3px; width:16px; height:16px; flex-shrink:0; cursor:pointer;}
+  .terms-check-row label{font-size:12.5px; color:#555; cursor:pointer; line-height:1.5;}
+  .terms-box-actions{display:flex; gap:10px; padding:14px 24px 22px;}
+  .terms-box-actions button{flex:1; padding:12px 0; border-radius:8px; border:none; font-weight:700; font-size:14px; cursor:pointer;}
+  .terms-btn-cancel{background:#e9e5d8; color:#555;}
+  .terms-btn-pay{background:var(--marigold); color:var(--indigo-900); opacity:.5; pointer-events:none; transition:.2s;}
+  .terms-btn-pay.ready{opacity:1; pointer-events:auto;}
+  .terms-btn-pay.ready:hover{background:var(--marigold-dark);}
+
+  /* Validity badge on owned course cards */
+  .validity-badge{font-size:11.5px; margin-top:6px; padding:4px 10px; border-radius:20px; display:inline-block;}
+  .validity-badge.ok{background:rgba(63,145,66,0.15); color:#3f9142;}
+  .validity-badge.soon{background:rgba(232,163,61,0.18); color:var(--marigold-dark);}
+  .validity-badge.expired{background:rgba(156,59,50,0.15); color:var(--ink-red);}
+
+  /* Subject -> 10 Tests folder */
+  .test-folder-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px; margin-top:16px;}
+  .test-folder-btn{
+    background:var(--sand-light); border:1px solid var(--sand); border-radius:8px; padding:16px 10px;
+    text-align:center; cursor:pointer; transition:.15s; color:var(--ink);
+  }
+  .test-folder-btn:hover{border-color:var(--indigo-700); transform:translateY(-2px);}
+  .test-folder-btn .tf-icon{font-size:22px; margin-bottom:6px;}
+  .test-folder-btn .tf-label{font-weight:700; font-size:14px;}
+  .test-folder-btn .tf-count{font-size:11.5px; color:#777; margin-top:3px;}
+  .test-folder-btn.tf-empty{opacity:.45; cursor:not-allowed;}
+  .test-folder-btn.tf-empty:hover{transform:none; border-color:var(--sand);}
+
+  /* Result chart bars */
+  .result-chart{display:flex; width:100%; height:14px; border-radius:8px; overflow:hidden; margin:6px 0 8px; background:#eee;}
+  .rc-bar{height:100%;}
+  .rc-correct{background:#3f9142;}
+  .rc-wrong{background:var(--ink-red);}
+  .rc-unatt{background:#bbb;}
+  .rc-legend{display:flex; gap:16px; font-size:12px; color:#666; margin-bottom:16px;}
+  .rc-legend span{display:flex; align-items:center; gap:5px;}
+  .rc-legend i{width:10px; height:10px; border-radius:3px; display:inline-block;}
+
+  /* Print (PDF download) — result ke alawa sab kuch chhupa dete hain */
+  @media print{
+    body.printing-result > *{display:none !important;}
+    body.printing-result #siteContent{display:block !important;}
+    body.printing-result #siteContent > *{display:none !important;}
+    body.printing-result main{display:block !important;}
+    body.printing-result main > *{display:none !important;}
+    body.printing-result #view-test{display:block !important;}
+    body.printing-result #view-test .section-head,
+    body.printing-result #view-test .cat-grid,
+    body.printing-result #view-test #notesPanel,
+    body.printing-result #view-test #testFolderBox,
+    body.printing-result #view-test #sectionPickerBox,
+    body.printing-result #view-test #quizBox{display:none !important;}
+    body.printing-result #resultBox{display:block !important; color:#000; background:#fff;}
+    body.printing-result #resultBox button{display:none !important;}
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  @keyframes fadeUp{from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);}}
+  .reveal{animation:fadeUp .6s ease both;}
+
+  /* ---------- SECTIONS ---------- */
+  section.block{max-width:1100px; margin:0 auto; padding:70px 20px;}
+  .section-head{margin-bottom:36px;}
+  .section-head h2{font-size:32px; color:var(--paper);}
+  .section-head p{color:var(--sand-light); margin-top:8px; font-size:15px;}
+  .rule{height:1px; background:linear-gradient(90deg,var(--marigold),transparent); width:120px; margin:14px 0 0;}
+
+  /* MCQ category grid */
+  .cat-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:18px;}
+  .cat-card{
+    background:var(--indigo-800); border:1px solid rgba(232,163,61,0.18); border-radius:6px;
+    padding:22px; cursor:pointer; transition:.2s; position:relative; overflow:hidden;
+  }
+  .cat-card:hover{border-color:var(--marigold); transform:translateY(-3px);}
+  .cat-card .num{font-family:'Rajdhani',sans-serif; font-size:13px; color:var(--marigold); letter-spacing:2px;}
+  .cat-card h3{font-size:20px; margin:8px 0 6px; color:var(--paper); font-family:'Hind',sans-serif; font-weight:600;}
+  .cat-card .count{font-size:13px; color:var(--sand);}
+
+  /* Quiz runner */
+  .quiz-box{
+    display:none; background:var(--paper); color:var(--ink); border-radius:6px; padding:28px; margin-top:24px;
+  }
+  .quiz-box.active{display:block;}
+
+  /* ---------- POP-UP MODE for Test Folder / Section Picker ----------
+     Ye 2 boxes ab page ke andar niche nahi khulte — seedha center me
+     pop-up ki tarah khulte hain, jise student ko scroll nahi karna padta. */
+  #testFolderBox.active, #sectionPickerBox.active, #instructionsModal.active{
+    display:flex; position:fixed; inset:0; z-index:250; margin:0; border-radius:0;
+    background:rgba(11,31,58,0.72); align-items:center; justify-content:center; padding:16px;
+  }
+  #testFolderBox .popup-inner, #sectionPickerBox .popup-inner, #instructionsModal .popup-inner{
+    background:var(--paper); color:var(--ink); border-radius:12px; width:100%; max-width:560px;
+    max-height:85vh; overflow-y:auto; padding:26px; position:relative; box-shadow:0 30px 70px rgba(0,0,0,.5);
+  }
+  .popup-close-btn{
+    position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%;
+    border:1px solid #ddd; background:#f2f2f2; color:#555; font-size:16px; cursor:pointer; line-height:1;
+  }
+  .popup-close-btn:hover{background:#e6e6e6;}
+  body.test-mode #testFolderBox.active, body.test-mode #sectionPickerBox.active{ display:none !important; }
+
+  /* Publish status badges for admin's test folders */
+  .tf-pub-badge{font-size:10.5px; margin-top:4px; padding:2px 7px; border-radius:10px; display:inline-block; font-weight:600;}
+  .tf-pub-badge.pub{background:rgba(63,145,66,0.15); color:#3f9142;}
+  .tf-pub-badge.draft{background:rgba(232,163,61,0.2); color:var(--marigold-dark);}
+
+  /* ---------- Hamburger side drawer ---------- */
+  .hamburger-btn{
+    background:none; border:1px solid var(--sand); border-radius:6px; width:36px; height:36px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;
+  }
+  .hamburger-btn span{display:block; width:18px; height:2px; background:var(--sand-light); margin:2px 0; border-radius:2px;}
+  [data-theme="light"] .hamburger-btn{border-color:#ccc;}
+  [data-theme="light"] .hamburger-btn span{background:var(--ink);}
+  .side-drawer-overlay{display:none; position:fixed; inset:0; z-index:400; background:rgba(0,0,0,0.5);}
+  .side-drawer-overlay.active{display:block;}
+  .side-drawer{
+    position:fixed; top:0; left:0; bottom:0; width:78%; max-width:300px; z-index:401;
+    background:var(--indigo-800); color:var(--paper); padding:22px 18px; transform:translateX(-100%);
+    transition:transform .25s ease; overflow-y:auto; box-shadow:4px 0 24px rgba(0,0,0,.4);
+  }
+  .side-drawer-overlay.active .side-drawer{transform:translateX(0);}
+  [data-theme="light"] .side-drawer{background:#fff; color:var(--ink); border-right:1px solid #e2ddd0;}
+  .side-drawer .sd-user{font-size:15px; font-weight:600; margin-bottom:2px;}
+  .side-drawer .sd-email{font-size:12.5px; color:var(--sand); margin-bottom:18px;}
+  [data-theme="light"] .side-drawer .sd-email{color:#777;}
+  .side-drawer button.sd-link, .side-drawer a.sd-link{
+    display:flex; align-items:center; gap:10px; width:100%; text-align:left; background:none; border:none;
+    color:inherit; font-family:'Hind',sans-serif; font-size:15px; padding:12px 4px; cursor:pointer;
+    border-bottom:1px solid rgba(232,163,61,0.15); text-decoration:none; box-sizing:border-box;
+  }
+  [data-theme="light"] .side-drawer button.sd-link, [data-theme="light"] .side-drawer a.sd-link{border-bottom-color:#eee;}
+  .side-drawer button.sd-link.sd-logout{color:var(--ink-red); margin-top:10px;}
+  .quiz-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;}
+  .quiz-top .tag{background:var(--indigo-700); color:var(--paper); font-size:12px; padding:4px 10px; border-radius:3px; font-family:'Rajdhani',sans-serif; letter-spacing:1px;}
+  .quiz-timer{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:16px; color:var(--ink-red); background:var(--sand-light); padding:4px 12px; border-radius:4px;}
+  .quiz-timer.low{animation:pulseRed 1s infinite;}
+  @keyframes pulseRed{0%,100%{opacity:1;}50%{opacity:.5;}}
+  .quiz-progress{font-size:12.5px; color:#777; margin-bottom:14px;}
+  .quiz-q{font-size:19px; font-weight:600; margin-bottom:18px;}
+  .quiz-q ul, .quiz-q ol{margin:10px 0 4px 22px; font-weight:500; font-size:17px;}
+  .quiz-q li{margin-bottom:6px;}
+  .quiz-opt{
+    display:block; width:100%; text-align:left; background:var(--sand-light); border:1px solid var(--sand);
+    border-radius:4px; padding:13px 16px; margin-bottom:10px; cursor:pointer; font-size:15.5px; font-family:'Hind',sans-serif; color:var(--ink);
+  }
+  .quiz-opt.selected{background:var(--indigo-700); color:var(--paper); border-color:var(--indigo-700);}
+  .quiz-opt.correct{background:#dff0d8; border-color:#5a9a5a;}
+  .quiz-opt.wrong{background:#f3d9d5; border-color:var(--ink-red);}
+  .quiz-nav{display:flex; justify-content:space-between; margin-top:20px; align-items:center; flex-wrap:wrap; gap:12px;}
+  .empty-note{color:var(--sand); font-size:14px; padding:14px 0;}
+
+  /* Question palette — attempted(green)/unattempted(red) navigator */
+  .quiz-layout{display:flex; gap:20px; align-items:flex-start;}
+  .quiz-palette{
+    width:230px; flex-shrink:0; display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start;
+    background:var(--sand-light); border-radius:6px; padding:14px; max-height:400px; overflow-y:auto;
+  }
+  .quiz-palette-title{width:100%; font-size:12px; color:#777; margin-bottom:4px;}
+  .palette-btn{
+    width:36px; height:36px; border-radius:6px; border:none; font-weight:700; cursor:pointer;
+    font-family:'Rajdhani',sans-serif; font-size:14px; flex-shrink:0; color:#fff;
+  }
+  .palette-btn.unattempted{background:var(--ink-red);}
+  .palette-btn.attempted{background:#3f9142;}
+  .palette-btn.current{outline:3px solid var(--marigold); outline-offset:1px;}
+  .quiz-main{flex:1; min-width:0;}
+  .palette-legend{display:flex; gap:16px; font-size:12px; margin-top:12px; color:#666;}
+  .palette-legend span{display:flex; align-items:center; gap:5px;}
+  .palette-legend .dot{width:10px; height:10px; border-radius:3px; display:inline-block;}
+  @media (max-width:768px){
+    .quiz-layout{flex-direction:column;}
+    .quiz-palette{width:100%; max-height:none; flex-wrap:nowrap; overflow-x:auto; overflow-y:visible;}
+    .quiz-palette-title{width:auto; margin-right:6px;}
+  }
+
+  /* Distraction-free fullscreen test mode — sirf test dikhta hai, baaki website hide */
+  body.test-mode header,
+  body.test-mode .bottom-nav,
+  body.test-mode footer,
+  body.test-mode #view-test .section-head,
+  body.test-mode #catGrid,
+  body.test-mode #notesPanel,
+  body.test-mode #sectionPickerBox{ display:none !important; }
+  body.test-mode #testFolderBox{ display:none !important; }
+  body.test-mode #quizBox{
+    position:fixed; inset:0; z-index:2000; margin:0; border-radius:0;
+    overflow-y:auto; padding:20px 16px 100px;
+  }
+  body.test-mode #resultBox.active{
+    position:fixed; inset:0; z-index:2000; margin:0; border-radius:0;
+    overflow-y:auto; padding:20px 16px 100px;
+  }
+  body.test-mode #view-test{padding-top:0;}
+
+  /* Results */
+  .result-box{display:none; background:var(--paper); color:var(--ink); border-radius:6px; padding:30px; margin-top:24px;}
+  .result-box.active{display:block;}
+  .acc-ring{
+    width:110px; height:110px; border-radius:50%;
+    background:conic-gradient(var(--marigold) calc(var(--pct)*1%), #e2ddd0 0);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .acc-ring-inner{
+    width:86px; height:86px; border-radius:50%; background:var(--paper);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .acc-ring-num{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:22px; color:var(--ink);}
+  .acc-ring-lbl{font-size:11px; color:#666;}
+  .rank-badge{
+    background:var(--sand-light); border-radius:8px; padding:14px 22px; font-size:15px; color:var(--ink);
+    text-align:center;
+  }
+  .review-tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;}
+  .review-tab{
+    background:var(--sand-light); border:1px solid var(--sand); color:#555; border-radius:20px;
+    padding:7px 14px; font-size:13px; cursor:pointer; font-family:'Hind',sans-serif;
+  }
+  .review-tab.active{background:var(--indigo-700); color:var(--paper); border-color:var(--indigo-700);}
+
+  .result-summary{display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:14px; margin-bottom:26px;}
+  .result-stat{background:var(--sand-light); border-radius:6px; padding:16px; text-align:center;}
+  .result-stat .num{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:26px;}
+  .result-stat .lbl{font-size:12px; color:#666; margin-top:2px;}
+  .result-stat.marks .num{color:var(--indigo-700);}
+  .result-stat.correct .num{color:#3a8a3a;}
+  .result-stat.wrong .num{color:var(--ink-red);}
+  .review-item{border-bottom:1px solid var(--sand); padding:16px 0;}
+  .review-q{font-weight:600; margin-bottom:8px;}
+  .review-q ul, .review-q ol{margin:8px 0 4px 20px; font-weight:500;}
+  .review-opt{padding:8px 12px; border-radius:4px; margin-bottom:6px; font-size:14px;}
+  .review-opt.your-correct{background:#dff0d8; border:1px solid #5a9a5a; border-left:4px solid #3a8a3a; font-weight:600;}
+  .review-opt.your-wrong{background:#f8d7da; color:#7a1f18; border:1px solid var(--ink-red); border-left:4px solid var(--ink-red); font-weight:600;}
+  .review-opt.correct-answer{background:#dff0d8; border:1px solid #5a9a5a; border-left:4px solid #3a8a3a; font-weight:600;}
+  .review-explain{background:var(--sand-light); border-radius:4px; padding:10px 14px; font-size:13.5px; color:#444; margin-top:8px;}
+
+  /* Current affairs feed */
+  .ca-feed{display:flex; flex-direction:column; gap:16px;}
+  .ca-item{
+    background:var(--indigo-800); border:1px solid rgba(232,163,61,0.15); border-radius:6px;
+    padding:20px 22px; display:flex; gap:18px; align-items:flex-start;
+  }
+  .ca-date-seal{
+    flex-shrink:0; width:56px; height:56px; border-radius:50%; border:2px solid var(--marigold);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-family:'Rajdhani',sans-serif; color:var(--marigold); line-height:1.05;
+  }
+  .ca-date-seal .d{font-size:18px; font-weight:700;}
+  .ca-date-seal .m{font-size:10px; letter-spacing:1px;}
+  .ca-item h3{font-size:17px; color:var(--paper); margin-bottom:6px; font-family:'Hind',sans-serif; font-weight:600;}
+  .ca-item p{color:var(--sand-light); font-size:14.5px;}
+
+  /* Admin */
+  .admin-gate{max-width:360px; margin:0 auto; text-align:center;}
+  .admin-gate input{
+    width:100%; padding:12px 14px; border-radius:4px; border:1px solid var(--sand); margin:14px 0;
+    background:var(--paper); color:var(--ink); font-family:'Hind',sans-serif; font-size:15px;
+  }
+  .admin-panel{display:none;}
+  .admin-panel.active{display:block;}
+  .admin-tabs{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px;}
+  .admin-tab{
+    padding:9px 18px; border-radius:4px; cursor:pointer; background:var(--indigo-800); font-size:14px;
+    border:1px solid rgba(232,163,61,0.2); color:var(--sand-light);
+  }
+  .admin-tab.active{background:var(--marigold); color:var(--indigo-900); font-weight:600;}
+  .form-block{display:none; background:var(--indigo-800); border-radius:6px; padding:24px; border:1px solid rgba(232,163,61,0.15);}
+  .form-block.active{display:block;}
+  .form-block label{display:block; font-size:13px; color:var(--sand); margin:14px 0 6px;}
+  .form-block input[type=text], .form-block input[type=date], .form-block input[type=password], .form-block select, .form-block textarea{
+    width:100%; padding:10px 12px; border-radius:4px; border:1px solid var(--sand); background:var(--paper);
+    color:var(--ink); font-family:'Hind',sans-serif; font-size:14.5px;
+  }
+  .form-block textarea{min-height:80px; resize:vertical;}
+  .opt-row{display:flex; gap:8px; align-items:center; margin-bottom:8px;}
+  .opt-row input[type=radio]{width:auto; flex-shrink:0;}
+  .opt-row input[type=text]{flex:1; width:auto;}
+  .list-existing{margin-top:26px;}
+  .exist-row{
+    display:flex; justify-content:space-between; align-items:center; background:var(--indigo-800);
+    padding:12px 16px; border-radius:4px; margin-bottom:8px; font-size:14px; border:1px solid rgba(232,163,61,0.1);
+  }
+  .exist-row button{background:var(--ink-red); color:var(--paper); border:none; padding:6px 12px; border-radius:3px; cursor:pointer; font-size:12px;}
+  .save-msg{color:#8fd18f; font-size:13px; margin-top:10px; display:none;}
+
+  /* ---------- LOGIN GATE ---------- */
+  #loginGate{
+    position:fixed; inset:0; z-index:200; background:var(--indigo-900);
+    display:flex; align-items:center; justify-content:center; padding:20px;
+  }
+  .login-box{
+    background:var(--paper); color:var(--ink); border-radius:8px; padding:34px 30px; width:100%; max-width:380px;
+    box-shadow:0 25px 60px rgba(0,0,0,.45); text-align:center;
+  }
+  .login-box .seal{
+    width:52px;height:52px;border-radius:50%; margin:0 auto 14px; border:2px solid var(--ink-red);
+    display:flex;align-items:center;justify-content:center; font-family:'Yatra One',cursive; color:var(--ink-red); font-size:24px;
+  }
+  .login-box h2{font-size:22px; margin-bottom:6px;}
+  .login-box p.sub{color:#666; font-size:13.5px; margin-bottom:20px;}
+  .login-tabs{display:flex; margin-bottom:20px; border-radius:5px; overflow:hidden; border:1px solid var(--sand);}
+  .login-tab{flex:1; padding:10px; cursor:pointer; font-size:14px; font-weight:600; background:var(--sand-light); color:var(--ink);}
+  .login-tab.active{background:var(--indigo-700); color:var(--paper);}
+  .login-box input{
+    width:100%; padding:12px 14px; border-radius:4px; border:1px solid var(--sand); margin-bottom:12px;
+    background:#fff; color:var(--ink); font-family:'Hind',sans-serif; font-size:15px;
+  }
+  .pass-wrap{position:relative;}
+  .pass-wrap input{margin-bottom:12px; padding-right:44px;}
+  .pass-eye{
+    position:absolute; right:10px; top:50%; transform:translateY(-50%); margin-top:-6px;
+    background:none; border:none; cursor:pointer; font-size:16px; opacity:.6; padding:4px;
+  }
+  .pass-eye:hover{opacity:1;}
+  .login-box .btn-primary{width:100%; margin-top:4px;}
+  .login-err{color:var(--ink-red); font-size:13px; margin-top:10px; min-height:16px;}
+  .forgot-link{color:var(--indigo-700); font-size:13px; margin-top:6px; cursor:pointer; text-decoration:underline;}
+  .login-loading{opacity:.5; pointer-events:none;}
+  #siteContent{display:none;}
+  #siteContent.ready{display:block;}
+  .student-badge{font-size:13px; color:var(--sand-light); display:flex; align-items:center; gap:10px;}
+  .student-badge button{background:none; border:1px solid var(--sand); color:var(--sand-light); padding:5px 12px; border-radius:4px; cursor:pointer; font-size:12.5px;}
+
+  /* Premium Course */
+  .premium-card{
+    background:var(--paper); color:var(--ink); border-radius:8px; padding:36px 30px; text-align:center;
+    max-width:480px; margin:0 auto; box-shadow:0 20px 50px rgba(0,0,0,.3);
+  }
+  .premium-lock{font-size:36px; margin-bottom:10px;}
+  .premium-card h3{font-size:22px; margin-bottom:6px;}
+  .premium-price{font-family:'Rajdhani',sans-serif; font-size:30px; font-weight:700; color:var(--ink-red); margin-bottom:12px;}
+  .premium-desc{color:#555; font-size:14.5px; line-height:1.6;}
+  .premium-steps{margin-top:22px; text-align:right; background:var(--sand-light); border-radius:6px; padding:16px 18px; font-size:13.5px; color:#444;}
+  .premium-steps p{margin-bottom:6px;}
+
+  footer{
+    border-top:1px solid rgba(232,163,61,0.15); margin-top:60px; padding:40px 20px 100px;
+    text-align:center; color:var(--sand);
+  }
+  footer .logo-text{justify-content:center; display:flex; margin-bottom:10px;}
+  footer p{font-size:13.5px; margin:4px 0;}
+  footer a{color:var(--marigold); text-decoration:none;}
+
+  /* Views */
+  .view{display:none;}
+  .view.active{display:block;}
+  main{padding-bottom:20px;}
+
+  /* Bottom Nav */
+  .bottom-nav{
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:rgba(15,20,35,0.97); backdrop-filter:blur(8px);
+    border-top:1px solid rgba(232,163,61,0.15);
+    display:flex; justify-content:space-around; padding:8px 4px calc(8px + env(safe-area-inset-bottom));
+  }
+  .bottom-nav button{
+    background:none; border:none; display:flex; flex-direction:column; align-items:center; gap:3px;
+    color:var(--sand); font-family:'Hind',sans-serif; font-size:11.5px; cursor:pointer; padding:4px 10px; flex:1;
+  }
+  .bottom-nav button .icon{font-size:20px;}
+  .bottom-nav button.active{color:var(--marigold);}
+
+  /* Theme toggle */
+  .theme-toggle{
+    background:none; border:1px solid var(--sand); color:var(--sand-light); border-radius:20px;
+    padding:6px 12px; font-size:13px; cursor:pointer; display:flex; align-items:center; gap:6px;
+  }
+  .bell-btn{
+    position:relative; background:none; border:1px solid var(--sand); color:var(--sand-light);
+    border-radius:50%; width:36px; height:36px; font-size:16px; cursor:pointer;
+  }
+  .bell-dot{
+    position:absolute; top:2px; right:2px; width:9px; height:9px; border-radius:50%;
+    background:var(--ink-red); border:1.5px solid var(--indigo-900);
+  }
+  .ann-feed{display:flex; flex-direction:column; gap:14px;}
+  .ann-item{
+    background:var(--indigo-800); border-left:3px solid var(--marigold); border-radius:6px;
+    padding:16px 20px; position:relative;
+  }
+  .ann-item h3{font-size:16px; margin-bottom:6px; color:var(--paper);}
+  .ann-item p{font-size:14px; color:var(--sand-light); line-height:1.6;}
+  .ann-item .ann-date{font-size:11.5px; color:var(--sand); margin-top:8px;}
+  .ann-item a.ann-link{color:var(--marigold); font-size:13.5px; display:inline-block; margin-top:8px;}
+  [data-theme="light"] .ann-item{background:#fff; border:1px solid #e2ddd0; border-left:3px solid var(--marigold-dark);}
+  [data-theme="light"] .ann-item h3{color:var(--ink);}
+  [data-theme="light"] .ann-item p{color:#555;}
+  [data-theme="light"] .bell-btn{border-color:#ccc; color:#555;}
+
+  /* Profile */
+  .profile-card{
+    background:var(--indigo-800); border:1px solid rgba(232,163,61,0.15); border-radius:8px;
+    padding:24px; max-width:520px; margin:0 auto 24px; text-align:center;
+  }
+  .profile-avatar{
+    width:64px; height:64px; border-radius:50%; background:var(--marigold); color:var(--indigo-900);
+    display:flex; align-items:center; justify-content:center; font-family:'Rajdhani',sans-serif; font-weight:700;
+    font-size:26px; margin:0 auto 12px;
+  }
+  .profile-name{font-size:19px; font-weight:600;}
+  .profile-email{font-size:13.5px; color:var(--sand); margin-bottom:16px;}
+  .history-section{max-width:600px; margin:0 auto;}
+  .history-row{
+    background:var(--indigo-800); border:1px solid rgba(232,163,61,0.12); border-radius:6px;
+    padding:14px 18px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;
+  }
+  .history-row .h-cat{font-weight:600; font-size:14.5px;}
+  .history-row .h-date{font-size:12px; color:var(--sand); margin-top:2px;}
+  .history-row .h-marks{font-family:'Rajdhani',sans-serif; font-weight:700; font-size:18px; color:var(--marigold);}
+</style>
+</head>
+<body>
+
+<div id="loginGate">
+  <div class="login-box">
+    <div class="seal">AR</div>
+    <h2>Arcave Academy</h2>
+    <p class="sub" data-i18n="login_sub">आगे बढ़ने के लिए लॉगिन करें</p>
+    <div class="login-tabs">
+      <div class="login-tab active" id="tabLogin" onclick="switchAuthTab('login')" data-i18n="tab_login">लॉगिन</div>
+      <div class="login-tab" id="tabSignup" onclick="switchAuthTab('signup')" data-i18n="tab_signup">नया अकाउंट</div>
+    </div>
+
+    <form id="authForm" onsubmit="event.preventDefault(); submitAuth();">
+      <input type="text" id="authName" name="name" autocomplete="name" placeholder="आपका नाम" style="display:none;">
+      <input type="email" id="authEmail" name="email" autocomplete="email" placeholder="ईमेल">
+      <div class="pass-wrap">
+        <input type="password" id="authPassword" name="password" autocomplete="current-password" placeholder="पासवर्ड (कम से कम 6 अक्षर)">
+        <button type="button" class="pass-eye" id="passEyeBtn" onclick="togglePassVisibility()">👁</button>
+      </div>
+      <button type="submit" class="btn btn-primary" id="authSubmitBtn" data-i18n="btn_login">लॉगिन करें</button>
+    </form>
+    <div class="login-err" id="authErr"></div>
+    <p class="forgot-link" id="forgotLink" onclick="handleForgotPassword()" data-i18n="forgot_pass">पासवर्ड भूल गए?</p>
+    <p style="margin-top:18px; font-size:12px; opacity:.75;">
+      <a href="about.html" style="color:inherit;">हमारे बारे में</a> ·
+      <a href="contact.html" style="color:inherit;">संपर्क करें</a> ·
+      <a href="privacy.html" style="color:inherit;">प्राइवेसी पॉलिसी</a>
+    </p>
+  </div>
+</div>
+
+<div class="terms-overlay" id="termsOverlay">
+  <div class="terms-box">
+    <div class="terms-box-head">
+      <h3 id="termsCourseName">नियम व शर्तें / Terms &amp; Conditions</h3>
+      <p>खरीदने से पहले नीचे दिए नियम ध्यान से पढ़ें</p>
+    </div>
+    <div class="terms-box-body">
+      <h4>हिंदी</h4>
+      <ul>
+        <li>यह टेस्ट सीरीज़ खरीदने के बाद <strong>1 वर्ष (365 दिन)</strong> तक मान्य रहेगी।</li>
+        <li>1 वर्ष पूरा होने पर एक्सेस स्वतः समाप्त हो जाएगा।</li>
+        <li>रिफंड नहीं मिलेगा।</li>
+        <li>एक अकाउंट केवल एक विद्यार्थी के लिए होगा।</li>
+      </ul>
+      <h4>English</h4>
+      <ul>
+        <li>This Test Series is valid for <strong>one year (365 days)</strong> from the date of purchase.</li>
+        <li>After one year, access will expire automatically.</li>
+        <li>No Refund.</li>
+        <li>One account is valid for one student only.</li>
+      </ul>
+    </div>
+    <div class="terms-check-row">
+      <input type="checkbox" id="termsAcceptCheck" onchange="onTermsCheckChange()">
+      <label for="termsAcceptCheck">मैंने नियम व शर्तें पढ़ ली हैं और मैं सहमत हूं / I have read and agree to the Terms &amp; Conditions</label>
+    </div>
+    <div class="terms-box-actions">
+      <button class="terms-btn-cancel" onclick="closeTermsModal()">रद्द करें</button>
+      <button class="terms-btn-pay" id="termsPayBtn" onclick="proceedToPayment()">आगे बढ़ें, भुगतान करें</button>
+    </div>
+  </div>
+</div>
+
+<div id="siteContent">
+
+<header>
+  <div class="nav-wrap">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <button class="hamburger-btn" onclick="openSideDrawer()" id="hamburgerBtn" aria-label="मेन्यू खोलें"><span></span><span></span><span></span></button>
+      <div class="logo">
+        <div class="seal">AR</div>
+        <div class="logo-text">Arcave <span>Academy</span></div>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button class="bell-btn" onclick="openAnnouncements()" id="bellBtn">🔔<span class="bell-dot" id="bellDot" style="display:none;"></span></button>
+      <button class="theme-toggle" onclick="toggleLang()" id="langToggleBtn" style="margin-right:6px;">EN</button>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn">🌙 Dark</button>
+    </div>
+  </div>
+</header>
+
+<div class="side-drawer-overlay" id="sideDrawerOverlay" onclick="if(event.target===this) closeSideDrawer();">
+  <div class="side-drawer" id="sideDrawer">
+    <button class="popup-close-btn" style="position:static; float:right;" onclick="closeSideDrawer()">✕</button>
+    <div class="sd-user" id="sdUserName">—</div>
+    <div class="sd-email" id="sdUserEmail">—</div>
+    <button class="sd-link" onclick="closeSideDrawer(); switchView('home');">🏠 होम</button>
+    <button class="sd-link" onclick="closeSideDrawer(); switchView('course');">🔒 Paid Batch</button>
+    <button class="sd-link" onclick="closeSideDrawer(); switchView('test');">📝 Free Test Series</button>
+    <button class="sd-link" onclick="closeSideDrawer(); switchView('profile');">👤 प्रोफाइल</button>
+    <a class="sd-link" href="https://t.me/ArcaveAcademy11" target="_blank" rel="noopener">📢 Telegram Channel</a>
+    <a class="sd-link" href="https://www.youtube.com/@ArcaveAcademy" target="_blank" rel="noopener">▶️ YouTube Channel</a>
+    <a class="sd-link" href="https://www.instagram.com/arcaveacademy?igsh=MTRhbmcyOGFsdTRnNQ==" target="_blank" rel="noopener">📸 Instagram</a>
+    <button class="sd-link sd-logout" onclick="closeSideDrawer(); logout();">🚪 लॉगआउट करें</button>
+  </div>
+</div>
+
+<main>
+
+<div id="view-home" class="view active">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">RSSB · RPSC · राजस्थान परीक्षा तैयारी</div>
+      <h1>हर <em>सवाल</em>,<br>एक कदम आगे</h1>
+      <p>राजस्थान इतिहास, भूगोल, कला-संस्कृति, हिंदी और अंग्रेज़ी के MCQ और रोज़ का करंट अफेयर्स — सब एक जगह।</p>
+      <div class="btn-row">
+        <button class="btn btn-primary" onclick="switchView('test')">टेस्ट शुरू करें</button>
+        <button class="btn btn-outline" onclick="switchView('course')">कोर्स देखें</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Paid Batch — simple, no images, no sliding -->
+  <section class="block" style="padding-top:0;padding-bottom:10px;">
+    <div class="section-head reveal">
+      <h2>🔒 Paid Batch</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="paid-simple-card" onclick="switchView('course')" style="max-width:1100px; margin:0 auto; padding:22px 24px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; cursor:pointer; border-radius:10px;">
+      <div>
+        <h2 style="font-size:20px; margin-bottom:4px;">Paid Batch</h2>
+        <p style="font-size:14px; margin:0;">टेस्ट सीरीज़ + PYQ · हर विषय ₹49 में · 365 दिन वैध</p>
+      </div>
+      <button class="btn btn-primary" onclick="event.stopPropagation(); switchView('course');">Paid Batch देखें</button>
+    </div>
+  </section>
+
+  <!-- Section 2: Free Test Series — simple, no images, no sliding -->
+  <section class="block" style="padding-top:20px;padding-bottom:10px;">
+    <div class="section-head reveal">
+      <h2>🆓 Free Test Series</h2>
+      <p>सभी विषयों के फुल-लेंथ टेस्ट — बिल्कुल मुफ्त, अभी शुरू करें</p>
+      <div class="rule"></div>
+    </div>
+    <div class="subject-grid" id="freeSubjectsGrid"></div>
+  </section>
+
+  <section class="block" style="padding-top:56px;padding-bottom:20px;">
+    <div class="stats-band" id="statsBand" style="padding:0;">
+      <div class="stat-box reveal"><div class="num" id="statSubjects">—</div><div class="label">विषय उपलब्ध</div></div>
+      <div class="stat-box reveal"><div class="num" id="statQuestions">—</div><div class="label">प्रैक्टिस सवाल</div></div>
+      <div class="stat-box reveal"><div class="num">24×7</div><div class="label">कभी भी टेस्ट दें</div></div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0;">
+    <div class="section-head reveal">
+      <h2>स्टूडेंट्स क्या कहते हैं</h2>
+      <p>Arcave Academy से तैयारी करने वाले विद्यार्थियों के अनुभव</p>
+      <div class="rule"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"राजस्थान इतिहास और भूगोल के टेस्ट बहुत हेल्पफुल हैं, पैटर्न बिल्कुल असली एग्जाम जैसा है।"</p>
+        <div class="testi-person"><div class="testi-avatar">R</div><div><b>रवि शर्मा</b><span>RSSB LDC अभ्यर्थी</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"रोज़ करंट अफेयर्स अपडेट मिलने से एक जगह ही पूरी तैयारी हो जाती है।"</p>
+        <div class="testi-person"><div class="testi-avatar">S</div><div><b>सुनीता मीणा</b><span>RPSC अभ्यर्थी</span></div></div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p>"परफॉर्मेंस एनालिसिस और रैंकिंग देखकर पता चलता है कि कहां सुधार करना है।"</p>
+        <div class="testi-person"><div class="testi-avatar">क</div><div><b>कृष्णा जांगिड़</b><span>CET अभ्यर्थी</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="announceSection" style="display:none;">
+    <div class="section-head">
+      <h2><span data-i18n="h_ann">📢 सूचनाएं</span></h2>
+      <p data-i18n="p_ann">नई अपडेट्स और घोषणाएं</p>
+      <div class="rule"></div>
+    </div>
+    <div class="ann-feed" id="announceFeed"></div>
+  </section>
+
+</div>
+
+<div id="view-course" class="view">
+  <section class="block">
+    <div class="section-head">
+      <h2 data-i18n="h_course">प्रीमियम कोर्स</h2>
+      <p data-i18n="p_course">टेस्ट सीरीज़ और PYQ — हर विषय ₹49 में</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cat-grid" id="courseGrid"></div>
+  </section>
+</div>
+
+<div id="view-test" class="view">
+  <section class="block">
+    <div class="section-head">
+      <h2 data-i18n="h_test">विषय चुनें</h2>
+      <p data-i18n="p_test">टेस्ट शुरू करने के लिए विषय पर टैप करें — सभी टेस्ट मुफ्त हैं</p>
+      <div class="rule"></div>
+    </div>
+    <div class="cat-grid" id="catGrid"></div>
+    <div id="notesPanel"></div>
+    <div class="quiz-box" id="testFolderBox" onclick="if(event.target===this) closeTestFolder();">
+      <div class="popup-inner">
+        <button class="popup-close-btn" onclick="closeTestFolder()">✕</button>
+        <h3 id="testFolderTitle" style="font-size:19px;margin-bottom:6px;"></h3>
+        <p style="font-size:13px;color:#666;">कौनसा टेस्ट देना है?</p>
+        <div id="testFolderGrid" class="test-folder-grid"></div>
+        <button class="btn btn-outline" style="margin-top:16px;color:var(--ink);border-color:#ccc;" onclick="closeTestFolder()">← वापस जाएं</button>
+      </div>
+    </div>
+    <div class="quiz-box" id="sectionPickerBox" onclick="if(event.target===this) closeSectionPicker();">
+      <div class="popup-inner">
+        <button class="popup-close-btn" onclick="closeSectionPicker()">✕</button>
+        <h3 id="sectionPickerTitle" style="font-size:19px;margin-bottom:6px;"></h3>
+        <p style="font-size:13px;color:#666;">कौनसा सेक्शन प्रैक्टिस करना है?</p>
+        <div id="sectionPickerList" style="display:flex;flex-direction:column;gap:10px;margin-top:16px;"></div>
+        <button class="btn btn-outline" style="margin-top:16px;color:var(--ink);border-color:#ccc;" onclick="closeSectionPicker()">← वापस जाएं</button>
+      </div>
+    </div>
+    <div class="quiz-box" id="instructionsModal">
+      <div class="popup-inner" style="max-width:640px;">
+        <h3 style="font-size:19px;margin-bottom:14px;">📋 परीक्षा निर्देश / Exam Instructions</h3>
+        <div style="max-height:50vh;overflow-y:auto;font-size:13.5px;line-height:1.7;color:#333;border:1px solid #e2ddd0;border-radius:8px;padding:14px 16px;background:#fbfaf7;">
+          <b>हिंदी:</b>
+          <ol style="margin:6px 0 14px 18px;padding:0;">
+            <li>टेस्ट शुरू करने के बाद इसे बीच में बंद न करें, वरना आपकी प्रोग्रेस सेव नहीं होगी।</li>
+            <li>सभी प्रश्नों के अंक समान हैं। प्रत्येक गलत उत्तर पर निर्धारित नेगेटिव मार्किंग काटी जाएगी।</li>
+            <li>उत्तर बदलने के लिए दूसरे विकल्प पर दोबारा टैप करें।</li>
+            <li>दिया गया समय समाप्त होते ही टेस्ट अपने आप सबमिट हो जाएगा।</li>
+            <li>टेस्ट के दौरान पेज को रिफ्रेश या बंद न करें।</li>
+          </ol>
+          <b>English:</b>
+          <ol style="margin:6px 0 0 18px;padding:0;">
+            <li>Once started, do not close the test midway — your progress will not be saved.</li>
+            <li>All questions carry equal marks. Negative marking will be deducted for each wrong answer as set for that question.</li>
+            <li>To change an answer, simply tap another option.</li>
+            <li>The test will auto-submit once the given time is over.</li>
+            <li>Do not refresh or close the page during the test.</li>
+          </ol>
+        </div>
+        <label style="display:flex;align-items:flex-start;gap:8px;margin-top:14px;font-size:13.5px;color:var(--ink);cursor:pointer;">
+          <input type="checkbox" id="instrAgreeChk" onchange="onInstrAgreeChange()" style="margin-top:3px;">
+          मैंने ऊपर दिए गए सभी निर्देश ध्यान से पढ़ और समझ लिए हैं। / I have read and understood all the instructions above.
+        </label>
+        <div style="display:flex;gap:10px;margin-top:16px;">
+          <button class="btn btn-primary" id="instrStartBtn" disabled onclick="confirmStartQuiz()">आगे बढ़ें और टेस्ट शुरू करें →</button>
+          <button class="btn btn-outline" style="color:var(--ink);border-color:#ccc;" onclick="closeInstructionsModal()">← वापस जाएं</button>
+        </div>
+      </div>
+    </div>
+    <div class="quiz-box" id="quizBox">
+      <div class="quiz-top">
+        <button class="btn btn-outline" style="color:var(--indigo-700);border-color:var(--indigo-700);padding:6px 12px;font-size:13px;" onclick="exitQuizConfirm()">← बाहर जाएं</button>
+        <span class="tag" id="quizCatName"></span>
+        <button onclick="shareCurrentTestLink()" style="background:none;border:1px solid var(--sand);border-radius:4px;padding:5px 10px;cursor:pointer;font-size:12px;color:var(--ink);" title="इस टेस्ट का लिंक शेयर करें">🔗 लिंक</button>
+        <span class="quiz-timer" id="quizTimer">⏱ 02:00:00</span>
+      </div>
+      <div class="quiz-layout">
+        <div class="quiz-palette" id="quizPalette">
+          <div class="quiz-palette-title">प्रश्न सूची</div>
+        </div>
+        <div class="quiz-main">
+          <div class="quiz-progress" id="quizProgress"></div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+            <div class="quiz-q" id="quizQText" style="flex:1;"></div>
+            <div style="display:flex;gap:6px;flex-shrink:0;">
+              <button id="bookmarkBtn" onclick="toggleBookmark()" title="बुकमार्क करें" style="background:none;border:1px solid var(--sand);border-radius:4px;padding:6px 10px;cursor:pointer;font-size:16px;">☆</button>
+              <button id="reportBtn" onclick="reportQuestion()" title="सवाल रिपोर्ट करें" style="background:none;border:1px solid var(--sand);border-radius:4px;padding:6px 10px;cursor:pointer;font-size:16px;">🚩</button>
+            </div>
+          </div>
+          <div id="quizOpts"></div>
+          <div class="palette-legend">
+            <span><i class="dot" style="background:#3f9142;"></i>हल किया हुआ</span>
+            <span><i class="dot" style="background:var(--ink-red);"></i>अनुत्तरित</span>
+          </div>
+          <div class="quiz-nav">
+            <div style="display:flex; gap:10px;">
+              <button class="btn btn-outline" style="color:var(--indigo-700);border-color:var(--indigo-700);" id="prevBtn" onclick="prevQuestion()">← पिछला</button>
+              <button class="btn btn-outline" style="color:var(--indigo-700);border-color:var(--indigo-700);" id="nextBtn" onclick="nextQuestion()">अगला →</button>
+              <button class="btn btn-primary" id="submitTestBtn" onclick="confirmSubmitTest()">सबमिट करें</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result-box" id="resultBox"></div>
+  </section>
+</div>
+
+<div id="view-profile" class="view">
+  <section class="block">
+    <div class="profile-card">
+      <div class="profile-avatar" id="profileAvatar">?</div>
+      <div class="profile-name" id="profileName">—</div>
+      <div class="profile-email" id="profileEmail">—</div>
+      <button class="btn" style="background:var(--ink-red);color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(156,59,50,0.4);margin-top:6px;" onclick="logout()">🚪 लॉगआउट</button>
+      <div id="adminOpenWrap" style="display:none; margin-top:12px;">
+        <button class="btn btn-primary" onclick="switchView('admin')">एडमिन पैनल खोलें</button>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2 data-i18n="h_profile_info">मेरी जानकारी</h2>
+      <p data-i18n="p_profile_info">अपनी प्रोफाइल पूरी करें</p>
+      <div class="rule"></div>
+    </div>
+    <div class="profile-card" style="text-align:left; padding:18px;">
+      <label>पूरा नाम</label>
+      <input type="text" id="pfName" placeholder="अपना नाम लिखें">
+      <label style="margin-top:10px;">मोबाइल नंबर</label>
+      <input type="tel" id="pfPhone" placeholder="10 अंकों का मोबाइल नंबर" maxlength="10">
+      <label style="margin-top:10px;">लक्ष्य परीक्षा (Target Exam)</label>
+      <input type="text" id="pfExam" placeholder="जैसे: RSSB LDC 2026, RPSC 2026">
+      <label style="margin-top:10px;">शहर / जिला</label>
+      <input type="text" id="pfCity" placeholder="अपना शहर/जिला लिखें">
+      <div style="margin-top:6px; font-size:13px; color:#888;">जुड़ने की तारीख: <span id="pfJoinDate">—</span></div>
+      <button class="btn btn-primary" style="margin-top:14px;" onclick="saveProfileDetails()">सेव करें</button>
+      <span class="save-msg" id="pfSaveMsg" style="margin-left:10px;">✓ सेव हो गया</span>
+    </div>
+
+    <div class="section-head">
+      <h2>⭐ बुकमार्क किए हुए सवाल</h2>
+      <p>बाद में revise करने के लिए सेव किए हुए सवाल</p>
+      <div class="rule"></div>
+    </div>
+    <div class="history-section" id="bookmarksList"><p class="empty-note">कोई सवाल बुकमार्क नहीं किया गया अभी तक।</p></div>
+
+  </section>
+</div>
+
+<div id="view-leaderboard" class="view">
+  <section class="block">
+    <div class="section-head">
+      <h2 data-i18n="h_rank">🏆 परफॉर्मेंस रैंकिंग</h2>
+      <p data-i18n="p_rank">सभी स्टूडेंट्स की रैंक — कुल टेस्ट अंकों के आधार पर</p>
+      <div class="rule"></div>
+    </div>
+    <div class="history-section" id="leaderboardList"><p class="empty-note">लोड हो रहा है...</p></div>
+  </section>
+</div>
+
+<div id="view-admin" class="view">
+  <section class="block">
+    <div class="section-head">
+      <h2 data-i18n="h_admin">एडमिन पैनल</h2>
+      <p data-i18n="p_admin">यहाँ से MCQ और करंट अफेयर्स जोड़ें</p>
+      <div class="rule"></div>
+    </div>
+    <button class="btn btn-outline" style="color:var(--indigo-700);border-color:var(--indigo-700);margin-bottom:20px;" onclick="switchView('profile')">← प्रोफाइल पर वापस जाएं</button>
+
+    <div class="admin-gate" id="adminGate">
+      <p style="color:var(--sand-light); font-size:14px;">यह पैनल सिर्फ एडमिन ईमेल से लॉगिन करने पर खुलता है।</p>
+      <p style="color:var(--sand); font-size:12px; margin-top:10px;">आप एडमिन नहीं हैं — कृपया एडमिन ईमेल से लॉगिन करें।</p>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-tabs">
+        <div class="admin-tab active" onclick="switchTab('mcqTab')" data-i18n="admtab_mcq">MCQ जोड़ें</div>
+        <div class="admin-tab" onclick="switchTab('notesTab')" data-i18n="admtab_notes">नोट्स (PDF)</div>
+        <div class="admin-tab" onclick="switchTab('caTab')" data-i18n="admtab_ca">करंट अफेयर्स जोड़ें</div>
+        <div class="admin-tab" onclick="switchTab('annTab')" data-i18n="admtab_ann">सूचनाएं भेजें</div>
+        <div class="admin-tab" onclick="switchTab('reportsTab')">🚩 रिपोर्ट्स <span id="reportsBadge" style="background:var(--ink-red);color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;margin-left:2px;"></span></div>
+        <div class="admin-tab" onclick="switchTab('studentsTab')" data-i18n="admtab_students">स्टूडेंट्स / पेमेंट</div>
+      </div>
+
+      <div class="form-block active" id="mcqTab">
+        <div class="admin-tabs" style="margin-bottom:14px;">
+          <div class="admin-tab active" id="singleModeBtn" onclick="setMcqMode('single')" data-i18n="mcq_single">एक-एक करके</div>
+          <div class="admin-tab" id="bulkModeBtn" onclick="setMcqMode('bulk')" data-i18n="mcq_bulk">बल्क में (एक साथ)</div>
+        </div>
+
+        <div id="mcqSingleMode">
+          <h4 id="mcqFormTitle" style="color:var(--marigold);font-size:15px;margin-bottom:6px;">नया सवाल जोड़ें</h4>
+          <label>विषय (Category)</label>
+          <select id="fCategory" onchange="updateSectionOptions('fSection','fSectionNew')"></select>
+          <label>अध्याय / सेक्शन (वैकल्पिक) — पहले से बना सेक्शन चुनें, या नया बनाएं</label>
+          <select id="fSection" onchange="onSectionSelectChange('fSection','fSectionNew')"></select>
+          <input type="text" id="fSectionNew" placeholder="नए सेक्शन का नाम लिखें (जैसे: Voice / Tense)" style="display:none;margin-top:8px;">
+          <label>टेस्ट नंबर (वैकल्पिक) — जो भी नंबर चाहें टाइप करें (जैसे 1, 11, 25...)</label>
+          <input type="number" id="fTestNumber" min="1" step="1" placeholder="टेस्ट नंबर लिखें, या खाली छोड़ें">
+          <label>सवाल</label>
+          <textarea id="fQuestion" placeholder="सवाल यहाँ लिखें..."></textarea>
+          <label>सवाल की इमेज (वैकल्पिक) — इमेज का URL पेस्ट करें</label>
+          <input type="text" id="fImage" placeholder="https://...">
+          <label>विकल्प</label>
+          <div class="opt-row"><input type="radio" name="correctOpt" value="0" checked><input type="text" id="fOpt0" placeholder="विकल्प 1 (A)"></div>
+          <div class="opt-row"><input type="radio" name="correctOpt" value="1"><input type="text" id="fOpt1" placeholder="विकल्प 2 (B)"></div>
+          <div class="opt-row"><input type="radio" name="correctOpt" value="2"><input type="text" id="fOpt2" placeholder="विकल्प 3 (C)"></div>
+          <div class="opt-row"><input type="radio" name="correctOpt" value="3"><input type="text" id="fOpt3" placeholder="विकल्प 4 (D)"></div>
+          <p style="font-size:12px;color:var(--sand);margin-top:4px;">सही विकल्प के आगे वाला रेडियो बटन चुनें। पांचवां विकल्प "E) अनुत्तरित प्रश्न" टेस्ट में अपने आप जुड़ जाता है।</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+            <div><label>अंक (Marks)</label><input type="number" id="fMarks" value="2" step="0.5"></div>
+            <div><label>नेगेटिव मार्क्स</label><input type="number" id="fNegative" value="0.67" step="0.01"></div>
+            <div><label>कठिनाई (Difficulty)</label>
+              <select id="fDifficulty">
+                <option value="easy">आसान</option>
+                <option value="medium" selected>मध्यम</option>
+                <option value="hard">कठिन</option>
+              </select>
+            </div>
+          </div>
+          <label>व्याख्या (Explanation) — वैकल्पिक</label>
+          <textarea id="fExplanation" placeholder="उत्तर की व्याख्या (रिजल्ट में दिखेगी)..."></textarea>
+          <div style="display:flex;gap:10px;margin-top:16px;">
+            <button class="btn btn-primary" id="mcqSaveBtn" onclick="saveMCQ()">MCQ सेव करें</button>
+            <button class="btn btn-outline" id="mcqCancelEditBtn" style="display:none;color:var(--paper);border-color:var(--sand);" onclick="cancelEditMCQ()">एडिट रद्द करें</button>
+          </div>
+          <span class="save-msg" id="mcqSaveMsg">✓ सेव हो गया</span>
+        </div>
+
+        <div id="mcqBulkMode" style="display:none;">
+          <label>विषय (Category) — सभी सवाल इसी विषय में जुड़ेंगे</label>
+          <select id="fBulkCategory" onchange="updateSectionOptions('fBulkSection','fBulkSectionNew')"></select>
+          <label>अध्याय / सेक्शन (वैकल्पिक) — पहले से बना सेक्शन चुनें, या नया बनाएं</label>
+          <select id="fBulkSection" onchange="onSectionSelectChange('fBulkSection','fBulkSectionNew')"></select>
+          <input type="text" id="fBulkSectionNew" placeholder="नए सेक्शन का नाम लिखें" style="display:none;margin-top:8px;">
+          <label>टेस्ट नंबर (वैकल्पिक) — जो भी नंबर चाहें टाइप करें (जैसे 1, 11, 25...) — सभी सवाल इसी टेस्ट में जुड़ेंगे</label>
+          <input type="number" id="fBulkTestNumber" min="1" step="1" placeholder="टेस्ट नंबर लिखें, या खाली छोड़ें">
+          <label>सवाल यहां पेस्ट करें (नीचे दिए गए फॉर्मेट में — हर सवाल के बीच सिर्फ एक खाली लाइन छोड़ें, "---" की जरूरत नहीं)। Matching (जोड़ी मिलाओ) वाले सवाल के लिए Q: के बाद &lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt; जैसी lines सीधे लिख सकते हैं, अब वो पूरी list सवाल में सही से जुड़ेगी।</label>
+          <textarea id="fBulkText" style="min-height:220px; font-family:monospace; font-size:13px;" placeholder="Q: सवाल यहां?
+A) विकल्प 1
+B) विकल्प 2
+C) विकल्प 3
+D) विकल्प 4
+Ans: B
+Exp: वैकल्पिक व्याख्या
+
+Q: Match the following:
+<ul>
+<li>1. Apple - Red</li>
+<li>2. Banana - Yellow</li>
+<li>3. Milk - White</li>
+</ul>
+A) 1-Red, 2-Yellow, 3-White
+B) 1-Yellow, 2-Red, 3-White
+C) 1-White, 2-Yellow, 3-Red
+D) 1-Red, 2-White, 3-Yellow
+Ans: A"></textarea>
+          <button class="btn btn-primary" style="margin-top:16px;" onclick="saveBulkMCQ()">सभी सवाल एक साथ सेव करें</button>
+          <span class="save-msg" id="bulkSaveMsg">✓ सेव हो गया</span>
+          <div id="bulkPreviewErr" style="color:var(--ink-red); font-size:13px; margin-top:10px;"></div>
+        </div>
+
+        <div id="mcqBulkDeleteBar" style="display:none;align-items:center;gap:10px;flex-wrap:wrap;background:var(--indigo-800);border:1px solid var(--ink-red);border-radius:6px;padding:10px 14px;margin-bottom:10px;">
+          <span id="mcqBulkDeleteCount" style="font-size:13px;color:var(--paper);font-weight:600;">0 सवाल चुने गए</span>
+          <button class="btn" style="background:var(--ink-red);color:#fff;padding:6px 14px;font-size:13px;" onclick="bulkDeleteSelectedMCQs()">🗑 चुने हुए हटाएं</button>
+          <button class="btn btn-outline" style="color:var(--paper);border-color:var(--sand);padding:6px 14px;font-size:13px;" onclick="clearMcqSelection()">चयन हटाएं</button>
+        </div>
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--sand);margin-bottom:10px;cursor:pointer;">
+          <input type="checkbox" id="mcqSelectAllChk" onchange="toggleSelectAllMCQs(this.checked)"> सभी दिख रहे सवाल चुनें
+        </label>
+        <div class="list-existing" id="mcqList"></div>
+      </div>
+
+      <div class="form-block" id="notesTab">
+        <p style="font-size:13px;color:var(--sand);">यहां से किसी विषय/कोर्स के लिए नोट्स PDF अपलोड करें — स्टूडेंट डाउनलोड कर पाएंगे</p>
+        <label>विषय (Category)</label>
+        <select id="fNoteCategory"></select>
+        <label>नोट्स का नाम</label>
+        <input type="text" id="fNoteTitle" placeholder="जैसे: राजस्थान इतिहास — अध्याय 1 नोट्स">
+        <label>PDF फाइल चुनें</label>
+        <input type="file" id="fNoteFile" accept="application/pdf">
+        <button class="btn btn-primary" style="margin-top:16px;" onclick="uploadNote()" id="noteUploadBtn">PDF अपलोड करें</button>
+        <span class="save-msg" id="noteSaveMsg">✓ अपलोड हो गया</span>
+        <div class="list-existing" id="notesAdminList" style="margin-top:20px;"></div>
+      </div>
+
+      <div class="form-block" id="caTab">
+        <label>दिनांक</label>
+        <input type="date" id="fCaDate">
+        <label>शीर्षक</label>
+        <input type="text" id="fCaTitle" placeholder="शीर्षक लिखें...">
+        <label>विवरण</label>
+        <textarea id="fCaContent" placeholder="विवरण लिखें..."></textarea>
+        <button class="btn btn-primary" style="margin-top:16px;" onclick="saveCA()">सेव करें</button>
+        <span class="save-msg" id="caSaveMsg">✓ सेव हो गया</span>
+        <div class="list-existing" id="caList"></div>
+      </div>
+
+      <div class="form-block" id="reportsTab">
+        <p style="font-size:13px;color:var(--sand);">Students ने जिन सवालों में गलती रिपोर्ट की है वो यहां दिखेंगे</p>
+        <div class="list-existing" id="reportsList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="form-block" id="studentsTab">
+        <p style="font-size:13px;color:var(--sand);">यहां से किसी स्टूडेंट को प्रीमियम कोर्स एक्सेस दें या हटाएं</p>
+        <label>ईमेल से खोजें</label>
+        <input type="text" id="fStudentSearch" placeholder="student@email.com" oninput="renderStudentsList()">
+        <div class="list-existing" id="studentsList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="form-block" id="annTab">
+        <p style="font-size:13px;color:var(--sand);">यह सूचना सभी students को होम पेज पर दिखेगी</p>
+        <label>शीर्षक</label>
+        <input type="text" id="fAnnTitle" placeholder="जैसे: नया YouTube वीडियो आया!">
+        <label>संदेश</label>
+        <textarea id="fAnnMsg" placeholder="विवरण लिखें..."></textarea>
+        <label>लिंक — वैकल्पिक (YouTube/WhatsApp/कोई भी)</label>
+        <input type="text" id="fAnnLink" placeholder="https://...">
+        <button class="btn btn-primary" style="margin-top:16px;" onclick="saveAnnouncement()">सूचना भेजें (होम पेज पर)</button>
+        <span class="save-msg" id="annSaveMsg">✓ भेज दिया गया</span>
+        <div class="list-existing" id="annList" style="margin-top:20px;"></div>
+
+        <div class="rule" style="margin:24px 0;"></div>
+        <h3 style="font-size:17px;margin-bottom:10px;">🔔 पुश नोटिफिकेशन (मोबाइल/डेस्कटॉप पर सीधा जाएगा)</h3>
+        <p style="font-size:13px;color:var(--sand);">जिन students ने नोटिफिकेशन की इजाज़त दी है, उन सबको तुरंत भेजा जाएगा</p>
+        <label>टाइटल</label>
+        <input type="text" id="fPushTitle" placeholder="जैसे: आज का करंट अफेयर्स आ गया!">
+        <label>मैसेज</label>
+        <textarea id="fPushBody" placeholder="विवरण लिखें..."></textarea>
+        <button class="btn btn-primary" style="margin-top:16px;" onclick="sendPushNotification()">🔔 सबको पुश नोटिफिकेशन भेजें</button>
+        <span class="save-msg" id="pushSaveMsg">✓ भेज दिया गया</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<nav class="bottom-nav" id="bottomNav">
+  <button data-view="home" onclick="switchView('home')" class="active"><span class="icon">🏠</span><span data-i18n="nav_home">होम</span></button>
+  <button data-view="course" onclick="switchView('course')"><span class="icon">🎓</span><span data-i18n="nav_course">कोर्स</span></button>
+  <button data-view="test" onclick="switchView('test')"><span class="icon">📝</span><span data-i18n="nav_test">टेस्ट</span></button>
+  <button data-view="profile" onclick="switchView('profile')"><span class="icon">👤</span><span data-i18n="nav_profile">प्रोफाइल</span></button>
+</nav>
+
+<footer>
+  <div class="logo-text">Arcave <span style="color:var(--marigold);">Academy</span></div>
+  <p data-i18n="footer_tagline">राजस्थान परीक्षा तैयारी के लिए बनाया गया</p>
+  <p style="margin-top:10px;">
+    <a href="https://t.me/ArcaveAcademy11" target="_blank" rel="noopener" style="color:var(--marigold-dark); text-decoration:none; margin-right:18px;">📢 Telegram</a>
+    <a href="https://www.youtube.com/@ArcaveAcademy" target="_blank" rel="noopener" style="color:var(--marigold-dark); text-decoration:none; margin-right:18px;">▶️ YouTube</a>
+    <a href="https://www.instagram.com/arcaveacademy?igsh=MTRhbmcyOGFsdTRnNQ==" target="_blank" rel="noopener" style="color:var(--marigold-dark); text-decoration:none;">📸 Instagram</a>
+  </p>
+  <p style="margin-top:12px; font-size:13px;">
+    <a href="about.html" style="color:inherit; opacity:.8; text-decoration:none; margin-right:14px;" data-i18n="footer_about">हमारे बारे में</a>
+    <a href="contact.html" style="color:inherit; opacity:.8; text-decoration:none; margin-right:14px;" data-i18n="footer_contact">संपर्क करें</a>
+    <a href="privacy.html" style="color:inherit; opacity:.8; text-decoration:none;" data-i18n="footer_privacy">प्राइवेसी पॉलिसी</a>
+  </p>
+</footer>
+
+</div>
+
+<script>
+/* ---------- FIREBASE INIT ---------- */
+const firebaseConfig = {
+  apiKey: "AIzaSyC2PxOInC0GEemcuh2eoSC49RIW9uTwxbI",
+  authDomain: "arcaveacademy.firebaseapp.com",
+  projectId: "arcaveacademy",
+  storageBucket: "arcaveacademy.firebasestorage.app",
+  messagingSenderId: "780388734362",
+  appId: "1:780388734362:web:dce67d925256f4cffe1623",
+  measurementId: "G-Y71YBJCLJB"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+const storage = firebase.storage();
+const functionsClient = firebase.functions();
+// Offline cache on — dobara visit karne par MCQs turant (cache se) dikhte hain,
+// aur dhire internet par bhi test load hone me kam samay lagta hai.
+try{ db.enablePersistence({synchronizeTabs:true}).catch(()=>{}); }catch(e){}
+
+/* ---------- AUTH UI ---------- */
+let authMode = 'login';
+function switchAuthTab(mode){
+  authMode = mode;
+  document.getElementById('tabLogin').classList.toggle('active', mode==='login');
+  document.getElementById('tabSignup').classList.toggle('active', mode==='signup');
+  document.getElementById('authName').style.display = mode==='signup' ? 'block' : 'none';
+  document.getElementById('authSubmitBtn').textContent = mode==='signup' ? 'अकाउंट बनाएं' : 'लॉगिन करें';
+  document.getElementById('authErr').textContent = '';
+}
+
+function togglePassVisibility(){
+  const inp = document.getElementById('authPassword');
+  const btn = document.getElementById('passEyeBtn');
+  if(inp.type === 'password'){ inp.type = 'text'; btn.textContent = '🙈'; }
+  else { inp.type = 'password'; btn.textContent = '👁'; }
+}
+
+async function submitAuth(){
+  const email = document.getElementById('authEmail').value.trim();
+  const pass = document.getElementById('authPassword').value;
+  const name = document.getElementById('authName').value.trim();
+  const errBox = document.getElementById('authErr');
+  errBox.textContent = '';
+  if(!email || !pass){ errBox.textContent = 'ईमेल और पासवर्ड भरें'; return; }
+  if(pass.length < 6){ errBox.textContent = 'पासवर्ड कम से कम 6 अक्षर का होना चाहिए'; return; }
+  document.querySelector('.login-box').classList.add('login-loading');
+  try{
+    if(authMode === 'signup'){
+      const cred = await auth.createUserWithEmailAndPassword(email, pass);
+      if(name) await cred.user.updateProfile({displayName: name});
+    } else {
+      await auth.signInWithEmailAndPassword(email, pass);
+    }
+    // Browser ka autofill band ho ya student ne app dobara install ki ho,
+    // is case ke liye email yahin (localStorage me) bhi yaad rakh lete hain.
+    try{ localStorage.setItem('arcave_last_email', email); }catch(e){}
+  }catch(e){
+    errBox.textContent = firebaseErrMsg(e.code);
+  }
+  document.querySelector('.login-box').classList.remove('login-loading');
+}
+
+function firebaseErrMsg(code){
+  const map = {
+    'auth/email-already-in-use':'ये ईमेल पहले से रजिस्टर्ड है, लॉगिन करें',
+    'auth/invalid-email':'ईमेल सही नहीं है',
+    'auth/weak-password':'पासवर्ड कमज़ोर है',
+    'auth/user-not-found':'अकाउंट नहीं मिला, नया अकाउंट बनाएं',
+    'auth/wrong-password':'पासवर्ड गलत है',
+    'auth/invalid-credential':'ईमेल या पासवर्ड गलत है'
+  };
+  return map[code] || 'कुछ गलत हो गया, दोबारा कोशिश करें';
+}
+
+async function handleForgotPassword(){
+  const errBox = document.getElementById('authErr');
+  const email = document.getElementById('authEmail').value.trim();
+  if(!email){
+    errBox.style.color = 'var(--ink-red)';
+    errBox.textContent = 'पहले ऊपर ईमेल बॉक्स में अपना ईमेल लिखें';
+    return;
+  }
+  try{
+    await auth.sendPasswordResetEmail(email);
+    errBox.style.color = '#2e7d32';
+    errBox.textContent = 'पासवर्ड रीसेट लिंक आपके ईमेल पर भेज दिया गया है, इनबॉक्स/स्पैम चेक करें';
+  }catch(e){
+    errBox.style.color = 'var(--ink-red)';
+    errBox.textContent = firebaseErrMsg(e.code);
+  }
+}
+
+function logout(){
+  if(sessionUnsub) sessionUnsub();
+  auth.signOut();
+}
+
+let sessionUnsub = null;
+let mySessionId = null;
+let kickedOut = false;
+
+function genSessionId(){
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
+async function claimSession(user){
+  mySessionId = genSessionId();
+  kickedOut = false;
+  await db.collection('sessions').doc(user.uid).set({
+    activeSession: mySessionId,
+    updatedAt: Date.now()
+  });
+  if(sessionUnsub) sessionUnsub();
+  sessionUnsub = db.collection('sessions').doc(user.uid).onSnapshot(doc=>{
+    if(!doc.exists) return;
+    const data = doc.data();
+    if(data.activeSession !== mySessionId && !kickedOut){
+      kickedOut = true;
+      if(sessionUnsub) sessionUnsub();
+      auth.signOut().then(()=>{
+        alert('आपका अकाउंट किसी दूसरे डिवाइस पर लॉगिन हुआ है, इसलिए यहां से लॉगआउट हो गया।');
+      });
+    }
+  });
+}
+
+auth.onAuthStateChanged(user=>{
+  if(user){
+    document.getElementById('loginGate').style.display = 'none';
+    document.getElementById('siteContent').classList.add('ready');
+    isAdminUser = ADMIN_EMAILS.includes(user.email); // turant set karo, taaki neeche loadData() mein sahi se pata chale ki admin list banani hai ya nahi
+    renderProfileHeader(user);
+    updateAdminAccess(user);
+    claimSession(user);
+    setupProfileAndPayment(user);
+    loadData().then(()=>{ setTimeout(openSharedTestFromHash, 400); });
+    loadHistory(user);
+    setupPushNotifications();
+  } else {
+    document.getElementById('loginGate').style.display = 'flex';
+    document.getElementById('siteContent').classList.remove('ready');
+    dataLoaded = false;
+    if(paymentUnsub) paymentUnsub();
+    // Pichhli baar jo email se login/signup hua tha, use yahin bhar dete hain
+    // taaki student ko baar-baar apna email yaad na karna pade.
+    try{
+      const lastEmail = localStorage.getItem('arcave_last_email');
+      const emailInput = document.getElementById('authEmail');
+      if(lastEmail && emailInput && !emailInput.value) emailInput.value = lastEmail;
+    }catch(e){}
+  }
+});
+
+function renderProfileHeader(user){
+  const name = user.displayName || (user.email ? user.email.split('@')[0] : (user.phoneNumber || 'स्टूडेंट'));
+  document.getElementById('profileName').textContent = name;
+  document.getElementById('profileEmail').textContent = user.email || user.phoneNumber || '';
+  document.getElementById('profileAvatar').textContent = name.charAt(0).toUpperCase();
+  const sdName = document.getElementById('sdUserName');
+  const sdEmail = document.getElementById('sdUserEmail');
+  if(sdName) sdName.textContent = name;
+  if(sdEmail) sdEmail.textContent = user.email || user.phoneNumber || '';
+}
+
+/* ---------- SIDE DRAWER (hamburger menu — login/logout, paid batch, etc.) ---------- */
+function openSideDrawer(){
+  document.getElementById('sideDrawerOverlay').classList.add('active');
+}
+function closeSideDrawer(){
+  document.getElementById('sideDrawerOverlay').classList.remove('active');
+}
+
+async function saveProfileDetails(){
+  const user = auth.currentUser;
+  if(!user) return;
+  const name = document.getElementById('pfName').value.trim();
+  const phone = document.getElementById('pfPhone').value.trim();
+  const targetExam = document.getElementById('pfExam').value.trim();
+  const city = document.getElementById('pfCity').value.trim();
+  if(phone && !/^[0-9]{10}$/.test(phone)){ alert('कृपया सही 10 अंकों का मोबाइल नंबर लिखें'); return; }
+  try{
+    await db.collection('profiles').doc(user.uid).set({name, phone, targetExam, city}, {merge:true});
+    if(name && user.displayName !== name){ await user.updateProfile({displayName:name}); }
+    document.getElementById('profileName').textContent = name || document.getElementById('profileName').textContent;
+    document.getElementById('profileAvatar').textContent = (name||'S').charAt(0).toUpperCase();
+    document.getElementById('pfSaveMsg').style.display = 'inline';
+    setTimeout(()=>document.getElementById('pfSaveMsg').style.display='none', 2500);
+  }catch(e){
+    console.error(e);
+    alert('सेव करने में दिक्कत आई, दोबारा कोशिश करें');
+  }
+}
+
+/* ---------- VIEW SWITCHING (bottom nav) ---------- */
+function switchView(name){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  const target = document.getElementById('view-'+name);
+  if(target) target.classList.add('active');
+  document.querySelectorAll('.bottom-nav button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.view === name);
+  });
+  window.scrollTo({top:0, behavior:'instant'});
+  if(name === 'leaderboard') loadLeaderboard();
+}
+
+/* ---------- THEME TOGGLE ---------- */
+function toggleTheme(){
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  setTheme(isLight ? 'dark' : 'light');
+}
+function setTheme(mode){
+  document.documentElement.setAttribute('data-theme', mode);
+  localStorage.setItem('arcave_theme', mode);
+  document.getElementById('themeToggleBtn').textContent = mode === 'light' ? '☀️ Light' : '🌙 Dark';
+}
+
+/* ---------- LANGUAGE TOGGLE (Hindi/English) ---------- */
+// Note: Ye sirf website ke interface (buttons/labels/headings) translate karta hai.
+// Admin ne jo questions/notes/current-affairs jis bhasha me daale hain, wo waise hi rahenge.
+const I18N = {
+  nav_home: {hi:'होम', en:'Home'},
+  nav_course: {hi:'कोर्स', en:'Courses'},
+  nav_test: {hi:'टेस्ट', en:'Test'},
+  nav_rank: {hi:'रैंकिंग', en:'Ranking'},
+  nav_profile: {hi:'प्रोफाइल', en:'Profile'},
+  footer_tagline: {hi:'राजस्थान परीक्षा तैयारी के लिए बनाया गया', en:'Built for Rajasthan exam preparation'},
+  footer_about: {hi:'हमारे बारे में', en:'About Us'},
+  footer_contact: {hi:'संपर्क करें', en:'Contact Us'},
+  footer_privacy: {hi:'प्राइवेसी पॉलिसी', en:'Privacy Policy'},
+  h_ann: {hi:'📢 सूचनाएं', en:'📢 Announcements'},
+  p_ann: {hi:'नई अपडेट्स और घोषणाएं', en:'Latest updates and announcements'},
+  h_ca: {hi:'करंट अफेयर्स', en:'Current Affairs'},
+  p_ca: {hi:'रोज़ अपडेट होने वाली महत्वपूर्ण जानकारी', en:'Important daily updated information'},
+  h_course: {hi:'प्रीमियम कोर्स', en:'Premium Courses'},
+  p_course: {hi:'टेस्ट सीरीज़ और PYQ — हर विषय ₹49 में', en:'Test Series & PYQ — every subject at ₹49'},
+  h_test: {hi:'विषय चुनें', en:'Choose Subject'},
+  p_test: {hi:'टेस्ट शुरू करने के लिए विषय पर टैप करें — सभी टेस्ट मुफ्त हैं', en:'Tap a subject to start the test — all tests are free'},
+  h_profile_info: {hi:'मेरी जानकारी', en:'My Information'},
+  p_profile_info: {hi:'अपनी प्रोफाइल पूरी करें', en:'Complete your profile'},
+  h_perf: {hi:'मेरा प्रदर्शन', en:'My Performance'},
+  p_perf: {hi:'आपके पिछले टेस्ट का रिकॉर्ड', en:'Record of your past tests'},
+  h_rank: {hi:'🏆 परफॉर्मेंस रैंकिंग', en:'🏆 Performance Ranking'},
+  p_rank: {hi:'सभी स्टूडेंट्स की रैंक — कुल टेस्ट अंकों के आधार पर', en:'All students ranked by total test score'},
+  h_admin: {hi:'एडमिन पैनल', en:'Admin Panel'},
+  p_admin: {hi:'यहाँ से MCQ और करंट अफेयर्स जोड़ें', en:'Add MCQs and current affairs from here'},
+  login_sub: {hi:'आगे बढ़ने के लिए लॉगिन करें', en:'Login to continue'},
+  tab_login: {hi:'लॉगिन', en:'Login'},
+  tab_signup: {hi:'नया अकाउंट', en:'New Account'},
+  btn_login: {hi:'लॉगिन करें', en:'Login'},
+  forgot_pass: {hi:'पासवर्ड भूल गए?', en:'Forgot password?'},
+  admtab_mcq: {hi:'MCQ जोड़ें', en:'Add MCQ'},
+  admtab_notes: {hi:'नोट्स (PDF)', en:'Notes (PDF)'},
+  admtab_ca: {hi:'करंट अफेयर्स जोड़ें', en:'Add Current Affairs'},
+  admtab_ann: {hi:'सूचनाएं भेजें', en:'Send Notifications'},
+  admtab_students: {hi:'स्टूडेंट्स / पेमेंट', en:'Students / Payments'},
+  mcq_single: {hi:'एक-एक करके', en:'One by One'},
+  mcq_bulk: {hi:'बल्क में (एक साथ)', en:'Bulk (all at once)'},
+};
+
+function applyLang(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(I18N[key]) el.textContent = I18N[key][lang];
+  });
+  document.getElementById('langToggleBtn').textContent = lang === 'hi' ? 'EN' : 'हिं';
+  localStorage.setItem('arcave_lang', lang);
+}
+
+function toggleLang(){
+  const current = localStorage.getItem('arcave_lang') || 'hi';
+  applyLang(current === 'hi' ? 'en' : 'hi');
+}
+(function initTheme(){
+  const saved = localStorage.getItem('arcave_theme') || 'dark';
+  setTheme(saved);
+})();
+(function initLang(){
+  const saved = localStorage.getItem('arcave_lang') || 'hi';
+  applyLang(saved);
+})();
+
+/* ---------- TEST HISTORY ---------- */
+async function saveTestResult(data){
+  const user = auth.currentUser;
+  if(!user) return;
+  try{
+    await db.collection('results').add({uid:user.uid, ...data, date:Date.now()});
+  }catch(e){ console.error(e); }
+}
+
+async function loadHistory(user){
+  const listEl = document.getElementById('historyList');
+  if(!listEl) return; // My Performance section hata di gayi hai
+  try{
+    const snap = await db.collection('results').where('uid','==',user.uid).get();
+    const rows = snap.docs.map(d=>d.data()).sort((a,b)=>b.date-a.date);
+    if(rows.length === 0){
+      listEl.innerHTML = '<p class="empty-note">अभी तक कोई टेस्ट नहीं दिया।</p>';
+      return;
+    }
+    listEl.innerHTML = rows.map(r=>{
+      const d = new Date(r.date);
+      const dateStr = d.toLocaleDateString('hi-IN', {day:'numeric', month:'short', year:'numeric'});
+      return `<div class="history-row">
+        <div><div class="h-cat">${r.category}</div><div class="h-date">${dateStr} • सही: ${r.correct} · गलत: ${r.wrong} · अनुत्तरित: ${r.unattempted}</div></div>
+        <div class="h-marks">${r.marks.toFixed(1)} अंक</div>
+      </div>`;
+    }).join('');
+  }catch(e){
+    listEl.innerHTML = '<p class="empty-note">लोड नहीं हो पाया।</p>';
+  }
+}
+
+function renderBookmarksList(){
+  const listEl = document.getElementById('bookmarksList');
+  if(!listEl) return;
+  const ids = [...bookmarkedIds];
+  if(ids.length === 0){
+    listEl.innerHTML = '<p class="empty-note">कोई सवाल बुकमार्क नहीं किया गया अभी तक।</p>';
+    return;
+  }
+  const items = mcqs.filter(m=>ids.includes(m.id));
+  listEl.innerHTML = items.map(m=>`
+    <div class="history-row" style="align-items:flex-start;flex-direction:column;gap:6px;">
+      <div style="width:100%;display:flex;justify-content:space-between;gap:10px;">
+        <div><div class="h-cat">${m.category}${m.section?' — '+m.section:''}</div><div class="h-date">${m.question.slice(0,80)}${m.question.length>80?'...':''}</div></div>
+        <button style="background:none;border:1px solid var(--sand);border-radius:4px;padding:4px 10px;cursor:pointer;color:var(--ink-red);font-size:12px;flex-shrink:0;" onclick="removeBookmark('${m.id}')">हटाएं</button>
+      </div>
+    </div>`).join('');
+}
+
+async function removeBookmark(id){
+  const user = auth.currentUser;
+  if(!user) return;
+  await db.collection('bookmarks').doc(user.uid).set({ [id]: false }, {merge:true});
+}
+
+async function loadLeaderboard(){
+  const listEl = document.getElementById('leaderboardList');
+  listEl.innerHTML = '<p class="empty-note">लोड हो रहा है...</p>';
+  try{
+    const [resultsSnap, profilesSnap] = await Promise.all([
+      db.collection('results').get(),
+      db.collection('profiles').get()
+    ]);
+    const profileMap = {};
+    profilesSnap.docs.forEach(d=>{ profileMap[d.id] = d.data(); });
+    const agg = {};
+    resultsSnap.docs.forEach(d=>{
+      const r = d.data();
+      if(!agg[r.uid]) agg[r.uid] = {uid:r.uid, totalMarks:0, tests:0};
+      agg[r.uid].totalMarks += (r.marks || 0);
+      agg[r.uid].tests += 1;
+    });
+    const rows = Object.values(agg).map(a=>{
+      const p = profileMap[a.uid] || {};
+      const name = p.name || (p.email ? p.email.split('@')[0] : 'Student');
+      return {...a, name};
+    }).sort((a,b)=>b.totalMarks - a.totalMarks);
+
+    if(rows.length===0){
+      listEl.innerHTML = '<p class="empty-note">अभी तक किसी ने टेस्ट नहीं दिया।</p>';
+      return;
+    }
+    const myUid = auth.currentUser ? auth.currentUser.uid : null;
+    listEl.innerHTML = rows.map((r,i)=>{
+      const isMe = r.uid === myUid;
+      const medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`;
+      return `<div class="history-row" style="${isMe?'border:2px solid var(--marigold);':''}">
+        <div><div class="h-cat">${medal} ${r.name}${isMe?' (आप)':''}</div><div class="h-date">${r.tests} टेस्ट दिए</div></div>
+        <div class="h-marks">${r.totalMarks.toFixed(1)} अंक</div>
+      </div>`;
+    }).join('');
+  }catch(e){
+    console.error(e);
+    listEl.innerHTML = '<p class="empty-note">लोड नहीं हो पाया।</p>';
+  }
+}
+
+/* ---------- PAYMENT CONFIG ---------- */
+const RAZORPAY_KEY_ID = "rzp_live_TEUfxd5ZO4BS90";
+
+/* ---------- PROFILE & PAYMENT ---------- */
+let paymentUnsub = null;
+async function setupProfileAndPayment(user){
+  try{
+    const profileRef = db.collection('profiles').doc(user.uid);
+    const snap = await profileRef.get();
+    const existing = snap.exists ? snap.data() : {};
+    const joinedAt = existing.joinedAt || Date.now();
+    await profileRef.set({
+      email:user.email, name: existing.name || user.displayName || '', joinedAt, lastLoginAt: Date.now()
+    }, {merge:true});
+
+    document.getElementById('pfName').value = existing.name || user.displayName || '';
+    document.getElementById('pfPhone').value = existing.phone || '';
+    document.getElementById('pfExam').value = existing.targetExam || '';
+    document.getElementById('pfCity').value = existing.city || '';
+    document.getElementById('pfJoinDate').textContent = new Date(joinedAt).toLocaleDateString('hi-IN', {day:'numeric', month:'long', year:'numeric'});
+  }catch(e){ console.error(e); }
+
+  if(paymentUnsub) paymentUnsub();
+  isAdminUser = ADMIN_EMAILS.includes(user.email);
+  paymentUnsub = db.collection('payments').doc(user.uid).onSnapshot(doc=>{
+    const d = doc.exists ? doc.data() : {};
+    const courses = d.courses || {};
+    const purchasedAt = d.purchasedAt || {};
+    const expiresAt = d.expiresAt || {};
+    const now = Date.now();
+    const map = new Map();
+    const expiredIds = [];
+    Object.keys(courses).filter(k=>courses[k]===true).forEach(id=>{
+      const exp = expiresAt[id];
+      if(exp && exp < now){
+        expiredIds.push(id); // 365 din poore, access apne aap khatam
+      } else {
+        map.set(id, {purchasedAt: purchasedAt[id] || null, expiresAt: exp || null});
+      }
+    });
+    purchasedCourses = map;
+    renderCourses();
+    if(expiredIds.length){
+      const clear = {};
+      expiredIds.forEach(id=>{ clear[id] = false; });
+      db.collection('payments').doc(user.uid).set({courses: clear}, {merge:true}).catch(()=>{});
+    }
+  }, ()=>{
+    purchasedCourses = new Map();
+    renderCourses();
+  });
+
+  if(bookmarkUnsub) bookmarkUnsub();
+  bookmarkUnsub = db.collection('bookmarks').doc(user.uid).onSnapshot(doc=>{
+    const data = doc.exists ? doc.data() : {};
+    bookmarkedIds = new Set(Object.keys(data).filter(k=>data[k]===true));
+    if(quizState && quizState.list && quizState.list.length) renderQuizQuestion();
+    renderBookmarksList();
+  }, ()=>{ bookmarkedIds = new Set(); });
+
+  if(reportsUnsub) reportsUnsub();
+  if(isAdminUser){
+    reportsUnsub = db.collection('reports').where('resolved','==',false).onSnapshot(snap=>{
+      const count = snap.size;
+      const badge = document.getElementById('reportsBadge');
+      if(badge) badge.textContent = count > 0 ? count : '';
+      renderReportsList(snap.docs.map(d=>({id:d.id, ...d.data()})));
+    });
+  }
+}
+
+let allStudents = [];
+let studentsProfilesMap = {};
+let studentsPaymentsMap = {};
+let studentsProfilesUnsub = null;
+let studentsPaymentsUnsub = null;
+function loadStudents(){
+  // Pehle ek hi baar data fetch hota tha (get()), isliye admin panel khula
+  // rehne par bhi naye login/students turant nahi dikhte the. Ab realtime
+  // listener (onSnapshot) laga diya hai — jaise hi koi naya student login
+  // karega ya apna profile update karega, list apne aap refresh ho jaayegi.
+  if(studentsProfilesUnsub) studentsProfilesUnsub();
+  if(studentsPaymentsUnsub) studentsPaymentsUnsub();
+
+  studentsProfilesUnsub = db.collection('profiles').onSnapshot(snap=>{
+    studentsProfilesMap = {};
+    snap.docs.forEach(d=>{ studentsProfilesMap[d.id] = d.data(); });
+    rebuildStudentsList();
+  }, e=>console.error(e));
+
+  studentsPaymentsUnsub = db.collection('payments').onSnapshot(snap=>{
+    studentsPaymentsMap = {};
+    snap.docs.forEach(d=>{ studentsPaymentsMap[d.id] = d.data().categories || {}; });
+    rebuildStudentsList();
+  }, e=>console.error(e));
+}
+
+function rebuildStudentsList(){
+  allStudents = Object.keys(studentsProfilesMap).map(uid=>({
+    uid, email: studentsProfilesMap[uid].email, name: studentsProfilesMap[uid].name,
+    lastLoginAt: studentsProfilesMap[uid].lastLoginAt || null,
+    categories: studentsPaymentsMap[uid] || {}
+  }));
+  renderStudentsList();
+}
+
+function renderStudentsList(){
+  const q = (document.getElementById('fStudentSearch').value||'').toLowerCase();
+  const list = document.getElementById('studentsList');
+  const filtered = allStudents.filter(s=>(s.email||'').toLowerCase().includes(q));
+  list.innerHTML = '<p style="font-size:13px;color:var(--sand);margin-bottom:10px;">कुल स्टूडेंट्स: '+allStudents.length+'</p>';
+  filtered.forEach(s=>{
+    const paidCount = Object.values(s.categories).filter(v=>v===true).length;
+    const nameDisplay = s.name && s.name.trim() ? s.name : 'नाम नहीं दिया';
+    const loginDisplay = s.lastLoginAt ? new Date(s.lastLoginAt).toLocaleString('hi-IN', {day:'numeric', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit'}) : 'पता नहीं';
+    const row = document.createElement('div');
+    row.className = 'exist-row';
+    row.style.flexDirection = 'column';
+    row.style.alignItems = 'stretch';
+    row.innerHTML = `<span>${s.email} <em style="opacity:.6;">(${paidCount} विषय खरीदे)</em></span>
+      <span style="font-size:12px;opacity:.75;margin-top:2px;">👤 ${nameDisplay} &nbsp;·&nbsp; 🕒 अंतिम लॉगिन: ${loginDisplay}</span>`;
+    const btnWrap = document.createElement('div');
+    btnWrap.style.display = 'flex';
+    btnWrap.style.flexWrap = 'wrap';
+    btnWrap.style.gap = '6px';
+    btnWrap.style.marginTop = '8px';
+    CATEGORIES.forEach(cat=>{
+      const isPaid = !!s.categories[cat];
+      const btn = document.createElement('button');
+      btn.textContent = (isPaid ? '✓ ' : '+ ') + cat.replace(' MCQ','');
+      btn.style.background = isPaid ? '#4a8f4a' : 'var(--indigo-700)';
+      btn.style.color = 'var(--paper)';
+      btn.style.border = 'none';
+      btn.style.padding = '5px 10px';
+      btn.style.borderRadius = '3px';
+      btn.style.fontSize = '11.5px';
+      btn.style.cursor = 'pointer';
+      btn.onclick = async ()=>{
+        await db.collection('payments').doc(s.uid).set({
+          categories: { [cat]: !isPaid }, updatedAt: Date.now()
+        }, {merge:true});
+        s.categories[cat] = !isPaid;
+        renderStudentsList();
+      };
+      btnWrap.appendChild(btn);
+    });
+    row.appendChild(btnWrap);
+    list.appendChild(row);
+  });
+}
+
+/* ---------- DATA ---------- */
+const CATEGORIES = [
+  "राजस्थान इतिहास एवं कला-संस्कृति MCQ","राजस्थान भूगोल MCQ","हिंदी MCQ","अंग्रेज़ी MCQ","गणित MCQ","करंट अफेयर्स MCQ"
+];
+const FREE_CATEGORIES = ["CET 12वीं पास मॉक टेस्ट", "CET स्नातक (Graduation) मॉक टेस्ट"];
+
+const SEED_MCQS = [
+  {category:"राजस्थान इतिहास एवं कला-संस्कृति MCQ", question:"मेवाड़ के किस शासक ने हल्दीघाटी का युद्ध लड़ा?", options:["राणा सांगा","राणा प्रताप","राणा कुम्भा","राणा उदयसिंह"], correct:1},
+  {category:"राजस्थान इतिहास एवं कला-संस्कृति MCQ", question:"राजस्थान का एकीकरण किस वर्ष पूर्ण हुआ?", options:["1949","1947","1956","1950"], correct:0},
+  {category:"राजस्थान भूगोल MCQ", question:"राजस्थान की सबसे लंबी नदी कौनसी है?", options:["लूनी","चंबल","बनास","माही"], correct:1},
+  {category:"राजस्थान भूगोल MCQ", question:"अरावली पर्वतमाला की सबसे ऊंची चोटी कौनसी है?", options:["गुरु शिखर","सज्जनगढ़","नाग पहाड़","अचलगढ़"], correct:0},
+  {category:"करंट अफेयर्स MCQ", question:"हाल ही में राजस्थान सरकार ने किस क्षेत्र में नई नीति घोषित की?", options:["डिजिटल शिक्षा","खेल","पर्यटन","कृषि"], correct:0},
+  {category:"राजस्थान इतिहास एवं कला-संस्कृति MCQ", question:"पुष्कर मेला किस माह में लगता है?", options:["अक्टूबर-नवंबर","जनवरी","मार्च","अगस्त"], correct:0},
+  {category:"राजस्थान इतिहास एवं कला-संस्कृति MCQ", question:"घूमर किस राज्य का प्रसिद्ध लोकनृत्य है?", options:["गुजरात","राजस्थान","पंजाब","हरियाणा"], correct:1},
+  {category:"हिंदी MCQ", question:"'सूरज' का पर्यायवाची शब्द नहीं है —", options:["रवि","भास्कर","हिमकर","दिनकर"], correct:2},
+  {category:"हिंदी MCQ", question:"'राजा' का विलोम शब्द है —", options:["रानी","प्रजा","रंक","सम्राट"], correct:2},
+  {category:"अंग्रेज़ी MCQ", question:"Choose the correct passive voice: 'She writes a letter.'", options:["A letter is written by her.","A letter was written by her.","A letter has written by her.","A letter writes by her."], correct:0},
+  {category:"अंग्रेज़ी MCQ", question:"Fill in the blank: He ____ to school every day.", options:["go","goes","going","gone"], correct:1},
+  {category:"गणित MCQ", question:"15 का 20% कितना होगा?", options:["2","3","4","5"], correct:1},
+  {category:"गणित MCQ", question:"(12 + 8) ÷ 4 = ?", options:["3","4","5","6"], correct:2}
+];
+
+
+
+const SEED_CA = [
+  {date:"2026-07-08", title:"राजस्थान सरकार की नई शिक्षा नीति घोषित", content:"राज्य सरकार ने सरकारी विद्यालयों में डिजिटल शिक्षा को बढ़ावा देने हेतु नई योजना की घोषणा की।"},
+  {date:"2026-07-05", title:"RSSB परीक्षा परिणाम अपडेट", content:"राजस्थान अधीनस्थ एवं मंत्रालयिक सेवा चयन बोर्ड द्वारा आगामी परीक्षाओं के कैलेंडर की जानकारी जारी की गई।"}
+];
+
+let mcqs = [];
+let currentAffairs = [];
+let notes = [];
+let quizState = {category:null, list:[], idx:0, answers:[], timeLeft:7200};
+let dataLoaded = false;
+let testPublishMap = {}; // key "category|||testNumber" -> {published:true/false}
+
+// Ek jaisa sawaal baar baar test me repeat hone se rokta hai (agar Firestore me
+// galti se duplicate ho gaya ho) — same category+section+testNumber+question
+// text wale sawaal me se sirf pehla hi rakha jaata hai.
+function dedupeMcqs(list){
+  const seen = new Set();
+  const out = [];
+  list.forEach(m=>{
+    const key = [m.category, m.section||'', m.testNumber||'', (m.question||'').trim().toLowerCase()].join('|||');
+    if(seen.has(key)) return;
+    seen.add(key);
+    out.push(m);
+  });
+  return out;
+}
+
+function testPublishKey(category, testNumber){
+  return category + '|||' + (testNumber || '');
+}
+// Purane test (jinke liye kabhi publish-record nahi banaya gaya) hamesha
+// visible rehte hain — sirf naye bane test numbers admin ke publish karne
+// tak chhupe rehte hain.
+function isTestPublished(category, testNumber){
+  const key = testPublishKey(category, testNumber);
+  if(!(key in testPublishMap)) return true;
+  return !!testPublishMap[key].published;
+}
+async function toggleTestPublish(category, testNumber){
+  const key = testPublishKey(category, testNumber);
+  const wasPublished = isTestPublished(category, testNumber);
+  const nowPublished = !wasPublished;
+  try{
+    await db.collection('testPublish').doc(key).set({category, testNumber: testNumber||null, published: nowPublished, updatedAt: Date.now()}, {merge:true});
+  }catch(e){
+    console.error('toggleTestPublish failed:', e);
+    alert('Publish/Unpublish सेव नहीं हो पाया। कारण: ' + (e && e.message ? e.message : 'नेटवर्क/परमिशन एरर') + '\nकृपया इंटरनेट चेक करें और दोबारा कोशिश करें।');
+    return; // Firestore write fail hui to local state/UI update nahi karenge
+  }
+  testPublishMap[key] = {category, testNumber: testNumber||null, published: nowPublished};
+  cacheSet('cache_pub', testPublishMap);
+  if(nowPublished){
+    postAutoAnnouncement('नया टेस्ट उपलब्ध', `"${category}"${testNumber?' — Test '+String(testNumber).padStart(2,'0'):''} अब उपलब्ध है — अभी प्रैक्टिस करें।`);
+  }
+  renderAdminLists();
+}
+
+/* ---------- LOCAL CACHE (5000+ MCQs baar baar Firestore se na khinchne ke liye) ----------
+   Pehli baar Firestore se fetch karke localStorage me save kar dete hain.
+   Agli baar page khulne par pehle cache se turant dikha dete hain (instant),
+   aur background me chup-chaap fresh data fetch karke cache update kar dete hain
+   taaki naye/edited sawaal bhi dikhte rahein. */
+const CACHE_TTL_MS = 2 * 60 * 1000; // pehle 20 min tha — isi wajah se naya publish kiya hua test 15-20 min tak students ko nahi dikhta tha. Ab sirf 2 min, taaki naya test jaldi dikhe aur baar-baar reload par bhi Firestore par load na pade.
+function cacheGet(key){
+  try{
+    const raw = localStorage.getItem(key);
+    if(!raw) return null;
+    const parsed = JSON.parse(raw);
+    return parsed;
+  }catch(e){ return null; }
+}
+function cacheSet(key, data){
+  try{ localStorage.setItem(key, JSON.stringify({data, ts:Date.now()})); }catch(e){ /* storage full ho to chup chaap ignore */ }
+}
+function cacheIsFresh(entry){
+  return !!entry && (Date.now() - entry.ts) < CACHE_TTL_MS;
+}
+
+function renderAllFromLoadedData(){
+  renderCategories();
+  renderFreeSubjects();
+  updateStatsBand();
+  renderCourses();
+  renderCourseSlider();
+  renderFreeSlider();
+  renderCA();
+  populateCategorySelect();
+  if(isAdminUser) renderAdminLists(); // sirf admin ke liye 5000+ sawaalon ki heavy edit/delete list banao — students ke liye ye kaam waste hai aur wahi slowness ki asli wajah thi
+}
+
+async function loadData(){
+  if(dataLoaded) return;
+  dataLoaded = true;
+
+  const cachedMcqs = cacheGet('cache_mcqs');
+  const cachedPub = cacheGet('cache_pub');
+  const cachedCA = cacheGet('cache_ca');
+  const cachedNotes = cacheGet('cache_notes');
+
+  // Step 1: cache me kuch bhi ho (chahe purana ho), turant screen par dikha do —
+  // user ko khaali screen dekh kar wait nahi karna padega.
+  if(cachedMcqs){
+    mcqs = cachedMcqs.data;
+    testPublishMap = cachedPub ? cachedPub.data : {};
+    currentAffairs = cachedCA ? cachedCA.data : [];
+    notes = cachedNotes ? cachedNotes.data : [];
+    renderAllFromLoadedData();
+  }
+
+  // Step 2: agar cache taaza (20 min se kam purana) hai to yahin ruk jao —
+  // Firestore ko dobara call hi nahi karna, page turant load ho gaya.
+  if(cacheIsFresh(cachedMcqs) && cacheIsFresh(cachedPub) && cacheIsFresh(cachedCA) && cacheIsFresh(cachedNotes)){
+    loadAnnouncements();
+    return;
+  }
+
+  // Step 3: background me fresh data khींचो (cache purana tha ya tha hi nahi).
+  // Pehle ye 4 fetch ek ke baad ek (sequential) chalte the — ab sab ek saath
+  // (parallel) chalte hain, isliye load kaafi tez ho jaata hai.
+  await Promise.all([
+    (async ()=>{
+      try{
+        const mcqSnap = await db.collection('mcqs').get();
+        if(mcqSnap.empty){
+          for(const m of SEED_MCQS) await db.collection('mcqs').add(m);
+          const refetch = await db.collection('mcqs').get();
+          mcqs = refetch.docs.map(d=>({id:d.id, ...d.data()}));
+        } else {
+          mcqs = mcqSnap.docs.map(d=>({id:d.id, ...d.data()}));
+        }
+        mcqs = dedupeMcqs(mcqs);
+        cacheSet('cache_mcqs', mcqs);
+      }catch(e){ console.error(e); if(!cachedMcqs) mcqs = SEED_MCQS.map((m,i)=>({id:'local'+i, ...m})); }
+    })(),
+    (async ()=>{
+      try{
+        const pubSnap = await db.collection('testPublish').get();
+        testPublishMap = {};
+        pubSnap.docs.forEach(d=>{ testPublishMap[d.id] = d.data(); });
+        cacheSet('cache_pub', testPublishMap);
+      }catch(e){ console.error(e); if(!cachedPub) testPublishMap = {}; }
+    })(),
+    (async ()=>{
+      try{
+        const caSnap = await db.collection('currentAffairs').get();
+        if(caSnap.empty){
+          for(const c of SEED_CA) await db.collection('currentAffairs').add(c);
+          const refetch = await db.collection('currentAffairs').get();
+          currentAffairs = refetch.docs.map(d=>({id:d.id, ...d.data()}));
+        } else {
+          currentAffairs = caSnap.docs.map(d=>({id:d.id, ...d.data()}));
+        }
+        cacheSet('cache_ca', currentAffairs);
+      }catch(e){ console.error(e); if(!cachedCA) currentAffairs = SEED_CA.map((c,i)=>({id:'local'+i, ...c})); }
+    })(),
+    (async ()=>{
+      try{
+        const notesSnap = await db.collection('notes').get();
+        notes = notesSnap.docs.map(d=>({id:d.id, ...d.data()}));
+        cacheSet('cache_notes', notes);
+      }catch(e){ console.error(e); if(!cachedNotes) notes = []; }
+    })()
+  ]);
+
+  renderAllFromLoadedData();
+  loadAnnouncements();
+}
+
+/* ---------- ANNOUNCEMENTS ---------- */
+let announcements = [];
+async function loadAnnouncements(){
+  try{
+    const snap = await db.collection('announcements').get();
+    announcements = snap.docs.map(d=>({id:d.id, ...d.data()})).sort((a,b)=>b.date-a.date);
+  }catch(e){ console.error(e); announcements = []; }
+  renderAnnouncements();
+  updateBellDot();
+  renderAdminAnnList();
+}
+
+function renderAnnouncements(){
+  const feed = document.getElementById('announceFeed');
+  const section = document.getElementById('announceSection');
+  if(announcements.length === 0){ section.style.display = 'none'; return; }
+  section.style.display = 'block';
+  feed.innerHTML = announcements.map(a=>{
+    const d = new Date(a.date);
+    const dateStr = d.toLocaleDateString('hi-IN', {day:'numeric', month:'short'});
+    return `<div class="ann-item">
+      <h3>${a.title}</h3>
+      <p>${a.message}</p>
+      ${a.link ? `<a class="ann-link" href="${a.link}" target="_blank">लिंक खोलें →</a>` : ''}
+      <div class="ann-date">${dateStr}</div>
+    </div>`;
+  }).join('');
+}
+
+function updateBellDot(){
+  if(announcements.length === 0){ document.getElementById('bellDot').style.display='none'; return; }
+  const lastSeen = parseInt(localStorage.getItem('arcave_last_seen_ann') || '0');
+  const latest = Math.max(...announcements.map(a=>a.date));
+  document.getElementById('bellDot').style.display = latest > lastSeen ? 'block' : 'none';
+}
+
+function openAnnouncements(){
+  switchView('home');
+  const latest = announcements.length ? Math.max(...announcements.map(a=>a.date)) : Date.now();
+  localStorage.setItem('arcave_last_seen_ann', String(latest));
+  document.getElementById('bellDot').style.display = 'none';
+  setTimeout(()=>{
+    const sec = document.getElementById('announceSection');
+    if(sec.style.display !== 'none') sec.scrollIntoView({behavior:'smooth'});
+  }, 100);
+}
+
+async function postAutoAnnouncement(title, message){
+  try{
+    await db.collection('announcements').add({title, message, link:'', date:Date.now()});
+    loadAnnouncements();
+  }catch(e){ console.error(e); }
+}
+
+async function saveAnnouncement(){
+  const title = document.getElementById('fAnnTitle').value.trim();
+  const message = document.getElementById('fAnnMsg').value.trim();
+  const link = document.getElementById('fAnnLink').value.trim();
+  if(!title || !message){ alert('कृपया शीर्षक और संदेश भरें'); return; }
+  await db.collection('announcements').add({title, message, link, date:Date.now()});
+  document.getElementById('fAnnTitle').value='';
+  document.getElementById('fAnnMsg').value='';
+  document.getElementById('fAnnLink').value='';
+  document.getElementById('annSaveMsg').style.display='inline';
+  setTimeout(()=>document.getElementById('annSaveMsg').style.display='none', 1800);
+  loadAnnouncements();
+}
+
+async function sendPushNotification(){
+  const title = document.getElementById('fPushTitle').value.trim();
+  const body = document.getElementById('fPushBody').value.trim();
+  if(!title || !body){ alert('कृपया टाइटल और मैसेज दोनों भरें'); return; }
+  const btn = event.target;
+  btn.disabled = true;
+  btn.textContent = 'भेजा जा रहा है...';
+  try{
+    const send = functionsClient.httpsCallable('sendBroadcastNotification');
+    await send({title, body});
+    document.getElementById('fPushTitle').value='';
+    document.getElementById('fPushBody').value='';
+    document.getElementById('pushSaveMsg').style.display='inline';
+    setTimeout(()=>document.getElementById('pushSaveMsg').style.display='none', 2500);
+  }catch(e){
+    console.error(e);
+    alert('नोटिफिकेशन भेजने में दिक्कत आई: ' + e.message);
+  }
+  btn.disabled = false;
+  btn.textContent = '🔔 सबको पुश नोटिफिकेशन भेजें';
+}
+
+function renderAdminAnnList(){
+  const list = document.getElementById('annList');
+  if(!list) return;
+  list.innerHTML = '<p style="font-size:13px;color:var(--sand);margin-bottom:10px;">भेजी गई सूचनाएं: '+announcements.length+'</p>';
+  announcements.forEach(a=>{
+    const row = document.createElement('div');
+    row.className = 'exist-row';
+    row.innerHTML = `<span>${a.title}</span>`;
+    const btn = document.createElement('button');
+    btn.textContent = 'हटाएं';
+    btn.onclick = async ()=>{ await db.collection('announcements').doc(a.id).delete(); loadAnnouncements(); };
+    row.appendChild(btn);
+    list.appendChild(row);
+  });
+}
+
+let purchasedCategories = new Set();
+
+// Category card par sahi label dikhane ke liye — agar category test-number se
+// organized hai to "X टेस्ट" dikhाओ, agar sirf loose questions hain to "X सवाल",
+// aur agar dono tarah ke sawaal hain to dono dikhाओ.
+function categoryCountLabel(cat){
+  const catQs = mcqs.filter(m=>m.category===cat);
+  const testCount = new Set(catQs.filter(m=>m.testNumber).map(m=>m.testNumber)).size;
+  const looseCount = catQs.filter(m=>!m.testNumber).length;
+  if(testCount>0 && looseCount>0) return `${testCount} टेस्ट · ${looseCount} सवाल`;
+  if(testCount>0) return `${testCount} टेस्ट`;
+  return `${catQs.length} सवाल`;
+}
+
+function renderCategories(){
+  const grid = document.getElementById('catGrid');
+  grid.innerHTML = '';
+  CATEGORIES.concat(FREE_CATEGORIES).forEach((cat, i)=>{
+    const card = document.createElement('div');
+    card.className = 'cat-card';
+    card.onclick = ()=> chooseCategory(cat);
+    card.innerHTML = `<div class="num">${String(i+1).padStart(2,'0')}</div>
+      <h3>${cat}</h3>
+      <div class="count">${categoryCountLabel(cat)}</div>
+      <div style="color:#8fd18f;font-size:13px;margin-top:6px;font-weight:600;">✓ मुफ्त टेस्ट</div>`;
+    grid.appendChild(card);
+  });
+}
+
+function chooseCategory(cat){
+  renderNotesList(cat);
+  const catQs = mcqs.filter(m=>m.category===cat);
+  const hasTestNumbers = catQs.some(m=>m.testNumber);
+  if(hasTestNumbers){ openTestFolder(cat, catQs); return; }
+  const sections = [...new Set(catQs.filter(m=>m.section).map(m=>m.section))];
+  if(sections.length === 0){ startQuiz(cat); return; }
+  document.getElementById('sectionPickerTitle').textContent = cat;
+  const list = document.getElementById('sectionPickerList');
+  list.innerHTML = '';
+  const allBtn = document.createElement('button');
+  allBtn.className = 'quiz-opt';
+  allBtn.textContent = `सभी सवाल (${catQs.length})`;
+  allBtn.onclick = ()=>{ closeSectionPicker(); startQuiz(cat); };
+  list.appendChild(allBtn);
+  sections.forEach(sec=>{
+    const count = catQs.filter(m=>m.section===sec).length;
+    const b = document.createElement('button');
+    b.className = 'quiz-opt';
+    b.textContent = `${sec} (${count})`;
+    b.onclick = ()=>{ closeSectionPicker(); startQuiz(cat, sec); };
+    list.appendChild(b);
+  });
+  document.getElementById('quizBox').classList.remove('active');
+  document.getElementById('resultBox').classList.remove('active');
+  document.getElementById('testFolderBox').classList.remove('active');
+  document.getElementById('sectionPickerBox').classList.add('active');
+}
+
+function closeSectionPicker(){
+  document.getElementById('sectionPickerBox').classList.remove('active');
+}
+
+/* ---------- SUBJECT -> N TESTS FOLDER ---------- */
+function openTestFolder(cat, catQs){
+  document.getElementById('testFolderTitle').textContent = cat;
+  const grid = document.getElementById('testFolderGrid');
+  grid.innerHTML = '';
+  const testNumbers = [...new Set(catQs.filter(m=>m.testNumber).map(m=>m.testNumber))].sort((a,b)=>a-b);
+  testNumbers.forEach(n=>{
+    const count = catQs.filter(m=>m.testNumber===n).length;
+    const published = isTestPublished(cat, n);
+    // Students ko sirf published test dikhte hain — jab tak Admin khud
+    // "Publish" na kare tab tak naya test list me nahi aata.
+    if(!isAdminUser && !published) return;
+    const btn = document.createElement('div');
+    btn.className = 'test-folder-btn';
+    const draftTag = (!published) ? '<div class="tf-pub-badge draft">🔒 Draft — Admin ने अभी public नहीं किया</div>' : '';
+    btn.innerHTML = `<div class="tf-icon">📄</div><div class="tf-label">Test ${String(n).padStart(2,'0')}</div><div class="tf-count">${count} सवाल</div>${draftTag}`;
+    btn.onclick = ()=>{ closeTestFolder(); startQuiz(cat, null, n); };
+    grid.appendChild(btn);
+  });
+  const untagged = catQs.filter(m=>!m.testNumber).length;
+  if(untagged > 0){
+    const btn = document.createElement('div');
+    btn.className = 'test-folder-btn';
+    btn.innerHTML = `<div class="tf-icon">📚</div><div class="tf-label">अन्य सवाल</div><div class="tf-count">${untagged} सवाल</div>`;
+    btn.onclick = ()=>{ closeTestFolder(); startQuiz(cat, null, 'none'); };
+    grid.appendChild(btn);
+  }
+  document.getElementById('quizBox').classList.remove('active');
+  document.getElementById('resultBox').classList.remove('active');
+  document.getElementById('sectionPickerBox').classList.remove('active');
+  document.getElementById('testFolderBox').classList.add('active');
+}
+function closeTestFolder(){
+  document.getElementById('testFolderBox').classList.remove('active');
+}
+
+/* ---------- PAID COURSES (video/notes bundles — separate from free tests) ---------- */
+const COURSES = [
+  {id:"course_history", name:"राजस्थान इतिहास एवं कला-संस्कृति कोर्स"},
+  {id:"course_geo", name:"राजस्थान भूगोल कोर्स"},
+  {id:"course_hindi", name:"हिंदी कोर्स"},
+  {id:"course_english", name:"अंग्रेज़ी कोर्स"},
+  {id:"course_maths", name:"गणित कोर्स"}
+];
+let purchasedCourses = new Map();
+let isAdminUser = false;
+let bookmarkedIds = new Set();
+let bookmarkUnsub = null;
+let reportsUnsub = null;
+
+let courseSliderIdx = 0;
+let courseSliderInterval = null;
+function renderCourseSlider(){
+  const wrap = document.getElementById('courseSlider');
+  const dots = document.getElementById('courseSliderDots');
+  if(!wrap || !dots) return;
+  wrap.innerHTML = COURSES.map(c=>`
+    <div class="course-slide" onclick="switchView('course')">
+      <div class="emoji">🎓</div>
+      <h3>${c.name}</h3>
+      <p>टेस्ट सीरीज़ + नोट्स PDF · सिर्फ ₹49 में अनलॉक करें</p>
+    </div>`).join('');
+  dots.innerHTML = COURSES.map((c,i)=>`<span class="dot${i===0?' active':''}"></span>`).join('');
+  courseSliderIdx = 0;
+  if(courseSliderInterval) clearInterval(courseSliderInterval);
+  if(COURSES.length > 1){
+    courseSliderInterval = setInterval(()=>{
+      courseSliderIdx = (courseSliderIdx + 1) % COURSES.length;
+      wrap.style.transform = `translateX(-${courseSliderIdx*100}%)`;
+      [...dots.children].forEach((d,i)=>d.classList.toggle('active', i===courseSliderIdx));
+    }, 3000);
+  }
+}
+
+let freeSliderIdx = 0;
+let freeSliderInterval = null;
+function renderFreeSlider(){
+  const wrap = document.getElementById('freeSlider');
+  const dots = document.getElementById('freeSliderDots');
+  if(!wrap || !dots) return;
+  const subjects = CATEGORIES.concat(FREE_CATEGORIES);
+  wrap.innerHTML = subjects.map(cat=>`
+    <div class="course-slide" onclick="switchView('test'); chooseCategory('${cat.replace(/'/g,"\\'")}');">
+      <div class="emoji">📈</div>
+      <h3>${cat}</h3>
+      <p>मुफ्त टेस्ट सीरीज़ · अभी शुरू करें</p>
+    </div>`).join('');
+  dots.innerHTML = subjects.map((c,i)=>`<span class="dot${i===0?' active':''}"></span>`).join('');
+  freeSliderIdx = 0;
+  if(freeSliderInterval) clearInterval(freeSliderInterval);
+  if(subjects.length > 1){
+    freeSliderInterval = setInterval(()=>{
+      freeSliderIdx = (freeSliderIdx + 1) % subjects.length;
+      wrap.style.transform = `translateX(-${freeSliderIdx*100}%)`;
+      [...dots.children].forEach((d,i)=>d.classList.toggle('active', i===freeSliderIdx));
+    }, 3000);
+  }
+}
+
+function renderCourses(){
+  const grid = document.getElementById('courseGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  const now = Date.now();
+  COURSES.forEach((course, i)=>{
+    const rec = purchasedCourses.get(course.id);
+    const owned = isAdminUser || !!rec;
+    const qCount = mcqs.filter(m=>m.category===course.name).length;
+    const card = document.createElement('div');
+    card.className = 'cat-card';
+    card.onclick = ()=> owned ? openCourse(course) : openTermsModal(course);
+
+    let validityHtml = '';
+    if(owned && rec && rec.expiresAt){
+      const daysLeft = Math.ceil((rec.expiresAt - now) / (1000*60*60*24));
+      const dateStr = new Date(rec.expiresAt).toLocaleDateString('hi-IN', {day:'numeric', month:'short', year:'numeric'});
+      const cls = daysLeft <= 30 ? 'soon' : 'ok';
+      validityHtml = `<div class="validity-badge ${cls}">⏳ ${dateStr} तक मान्य ${daysLeft<=30?`(${daysLeft} दिन बाकी)`:''}</div>`;
+    } else if(owned){
+      validityHtml = '<div class="validity-badge ok">✓ एडमिन एक्सेस</div>';
+    }
+
+    card.innerHTML = `<div class="num">${String(i+1).padStart(2,'0')}</div>
+      <h3>${course.name}</h3>
+      <div class="count">टेस्ट सीरीज़ + नोट्स PDF · ${qCount} सवाल</div>
+      ${owned
+        ? '<div style="color:#8fd18f;font-size:13px;margin-top:6px;font-weight:600;">✓ एक्सेस सक्रिय — टैप करें</div>'
+        : '<div style="color:var(--marigold);font-size:13px;margin-top:6px;font-weight:600;">🔒 ₹49 में अनलॉक करें</div>'}
+      ${validityHtml}`;
+    grid.appendChild(card);
+  });
+}
+
+function openCourse(course){
+  switchView('test');
+  chooseCategory(course.name);
+  renderNotesList(course.name);
+}
+
+/* ---------- TERMS & CONDITIONS GATE (before payment) ---------- */
+let pendingPurchaseCourse = null;
+function openTermsModal(course){
+  const user = auth.currentUser;
+  if(!user){ alert('कृपया पहले लॉगिन करें'); return; }
+  pendingPurchaseCourse = course;
+  document.getElementById('termsCourseName').textContent = `नियम व शर्तें — ${course.name}`;
+  document.getElementById('termsAcceptCheck').checked = false;
+  document.getElementById('termsPayBtn').classList.remove('ready');
+  document.getElementById('termsOverlay').classList.add('active');
+}
+function closeTermsModal(){
+  document.getElementById('termsOverlay').classList.remove('active');
+  pendingPurchaseCourse = null;
+}
+function onTermsCheckChange(){
+  const checked = document.getElementById('termsAcceptCheck').checked;
+  document.getElementById('termsPayBtn').classList.toggle('ready', checked);
+}
+function proceedToPayment(){
+  if(!document.getElementById('termsAcceptCheck').checked) return;
+  const course = pendingPurchaseCourse;
+  document.getElementById('termsOverlay').classList.remove('active');
+  if(course) startCoursePayment(course);
+}
+
+const VALIDITY_DAYS = 365;
+// ---------- SECURE PAYMENT FLOW ----------
+// Pehle yahan seedha client se "payments" collection likh kar course unlock ho
+// jaata tha — koi bhi browser console se fake payment ID daal kar FREE me
+// unlock kar sakta tha. Ab order server par (Vercel ke /api/create-order) banta
+// hai, aur payment success hone ke baad signature server hi (/api/verify-payment)
+// khud verify karta hai, tabhi Firestore unlock hota hai।
+// Zaroori: yeh tabhi kaam karega jab /api/create-order.js aur
+// /api/verify-payment.js Vercel project me deploy ho chuke hon (Blaze plan ki
+// zaroorat nahi — Vercel ke free Hobby plan par hi chal jaata hai)।
+async function startCoursePayment(course){
+  const user = auth.currentUser;
+  if(!user){ alert('कृपया पहले लॉगिन करें'); return; }
+
+  let orderData;
+  try{
+    const idToken = await user.getIdToken();
+    const res = await fetch('/api/create-order', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + idToken },
+      body: JSON.stringify({ courseId: course.id })
+    });
+    if(!res.ok) throw new Error('order create failed: ' + res.status);
+    orderData = await res.json();
+  }catch(e){
+    console.error(e);
+    alert('पेमेंट एरर: ' + (e.message || e));
+    return;
+  }
+
+  const options = {
+    key: orderData.keyId || RAZORPAY_KEY_ID,
+    order_id: orderData.orderId,
+    amount: orderData.amount,
+    currency: orderData.currency || "INR",
+    name: "Arcave Academy",
+    description: course.name + " — 1 वर्ष एक्सेस",
+    prefill: { email: user.email, name: user.displayName || '' },
+    theme: { color: "#0d2b28" },
+    handler: async function(response){
+      try{
+        const idToken2 = await user.getIdToken();
+        const res2 = await fetch('/api/verify-payment', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + idToken2 },
+          body: JSON.stringify({
+            orderId: response.razorpay_order_id,
+            paymentId: response.razorpay_payment_id,
+            signature: response.razorpay_signature,
+            courseId: course.id
+          })
+        });
+        if(!res2.ok) throw new Error('verify failed: ' + res2.status);
+        const result = await res2.json();
+        const expiresAt = result.expiresAt;
+        purchasedCourses.set(course.id, {purchasedAt: Date.now(), expiresAt});
+        renderCourses();
+        const dateStr = new Date(expiresAt).toLocaleDateString('hi-IN', {day:'numeric', month:'long', year:'numeric'});
+        alert('पेमेंट सफल! "'+course.name+'" अब अनलॉक हो गया 🎉\nएक्सेस मान्य: '+dateStr+' तक');
+      }catch(e){
+        console.error(e);
+        alert('पेमेंट हो गया, लेकिन वेरिफाई करने में दिक्कत आई। कृपया एडमिन से संपर्क करें, पेमेंट ID: ' + response.razorpay_payment_id);
+      }
+    },
+    modal: { ondismiss: function(){} }
+  };
+  const rzp = new Razorpay(options);
+  rzp.on('payment.failed', function(){ alert('पेमेंट असफल रहा, कृपया दोबारा कोशिश करें।'); });
+  rzp.open();
+}
+
+// ---------- SHAREABLE TEST LINKS ----------
+// Test khulte hi URL me uska link jud jaata hai (#test|category|section|testNumber),
+// jise student copy karke doston ko bhej sakta hai. Paid batch ka link tabhi
+// khulega jab dusra student bhi login + payment kar chuka ho — warna use pehle
+// terms/payment popup dikhega (login zaroori hai, purchase check auto hota hai).
+function setTestHash(cat, section, testNumber){
+  const parts = [encodeURIComponent(cat), section?encodeURIComponent(section):'', testNumber?encodeURIComponent(testNumber):''];
+  try{ history.replaceState(null, '', '#test|'+parts.join('|')); }catch(e){}
+}
+function clearTestHash(){
+  try{ history.replaceState(null, '', location.pathname + location.search); }catch(e){}
+}
+function shareCurrentTestLink(){
+  if(!location.hash.startsWith('#test|')){ alert('पहले कोई टेस्ट शुरू करें'); return; }
+  const url = location.href;
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(()=>alert('लिंक कॉपी हो गया! अब कहीं भी शेयर करें।')).catch(()=>prompt('इस लिंक को कॉपी करें:', url));
+  } else {
+    prompt('इस लिंक को कॉपी करें:', url);
+  }
+}
+async function openSharedTestFromHash(){
+  const h = location.hash;
+  if(!h.startsWith('#test|')) return;
+  const [, catEnc, secEnc, tnEnc] = h.split('|');
+  const cat = decodeURIComponent(catEnc||'');
+  const section = secEnc ? decodeURIComponent(secEnc) : null;
+  const testNumber = tnEnc ? parseInt(decodeURIComponent(tnEnc)) : null;
+  if(!cat) return;
+  const course = COURSES.find(c=>c.name===cat);
+  if(course){
+    const owned = isAdminUser || purchasedCourses.get(course.id);
+    switchView('course');
+    if(owned){ switchView('test'); startQuiz(cat, section, testNumber); }
+    else { openTermsModal(course); }
+  } else {
+    switchView('test');
+    startQuiz(cat, section, testNumber);
+  }
+}
+
+// Test seedhe shuru nahi hota — pehle instructions modal dikhta hai, checkbox
+// tick karne ke baad hi asli test (startQuizReal) shuru hota hai.
+let pendingQuizArgs = null;
+function startQuiz(cat, section, testNumber){
+  pendingQuizArgs = {cat, section, testNumber};
+  document.getElementById('quizBox').classList.remove('active');
+  document.getElementById('resultBox').classList.remove('active');
+  document.getElementById('testFolderBox').classList.remove('active');
+  document.getElementById('sectionPickerBox').classList.remove('active');
+  document.getElementById('instrAgreeChk').checked = false;
+  document.getElementById('instrStartBtn').disabled = true;
+  document.getElementById('instructionsModal').classList.add('active');
+}
+function onInstrAgreeChange(){
+  document.getElementById('instrStartBtn').disabled = !document.getElementById('instrAgreeChk').checked;
+}
+function closeInstructionsModal(){
+  document.getElementById('instructionsModal').classList.remove('active');
+  pendingQuizArgs = null;
+}
+function confirmStartQuiz(){
+  if(!pendingQuizArgs) return;
+  const {cat, section, testNumber} = pendingQuizArgs;
+  document.getElementById('instructionsModal').classList.remove('active');
+  pendingQuizArgs = null;
+  startQuizReal(cat, section, testNumber);
+}
+
+// Test ki duration category ke hisaab se tay hoti hai:
+// - CET 12वीं पास मॉक टेस्ट: fixed 2.5 ghante (120 sawaal ke set ke liye)
+// - CET स्नातक (Graduation) मॉक टेस्ट: fixed 3 ghante (150 sawaal ke set ke liye)
+// - baaki sab test: har sawaal ke liye 1 minute
+function getTestDurationSecs(cat, questionCount){
+  if(cat === 'CET 12वीं पास मॉक टेस्ट') return 2.5 * 3600;
+  if(cat === 'CET स्नातक (Graduation) मॉक टेस्ट') return 3 * 3600;
+  return questionCount * 60;
+}
+
+function startQuizReal(cat, section, testNumber){
+  let list = mcqs.filter(m=>m.category===cat && (!section || m.section===section));
+  if(testNumber === 'none'){ list = list.filter(m=>!m.testNumber); }
+  else if(testNumber){ list = list.filter(m=>m.testNumber===testNumber); }
+  if(quizTimerInterval) clearInterval(quizTimerInterval);
+  quizState = {category:cat, section:section||null, testNumber:testNumber||null, list, idx:0, answers:new Array(list.length).fill(null), timeLeft: getTestDurationSecs(cat, list.length)};
+  setTestHash(cat, section, testNumber);
+  document.getElementById('resultBox').classList.remove('active');
+  document.getElementById('quizBox').classList.add('active');
+  document.body.classList.add('test-mode'); // sirf test dikhe, baaki website hide
+  let label = cat;
+  if(section) label += ` — ${section}`;
+  if(testNumber && testNumber !== 'none') label += ` — Test ${String(testNumber).padStart(2,'0')}`;
+  document.getElementById('quizCatName').textContent = label;
+  if(list.length===0){
+    document.getElementById('quizQText').innerHTML = '';
+    document.getElementById('quizOpts').innerHTML = '<div class="empty-note">इस विषय में अभी कोई सवाल नहीं है। एडमिन पैनल से जोड़ें।</div>';
+    document.getElementById('prevBtn').style.display='none';
+    document.getElementById('nextBtn').style.display='none';
+    document.getElementById('submitTestBtn').style.display='none';
+    document.getElementById('quizProgress').textContent = '';
+    document.getElementById('quizTimer').textContent = '';
+  } else {
+    document.getElementById('prevBtn').style.display='inline-block';
+    document.getElementById('nextBtn').style.display='inline-block';
+    document.getElementById('submitTestBtn').style.display='inline-block';
+    renderQuizQuestion();
+    startQuizTimer();
+  }
+  document.getElementById('quizBox').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+let quizTimerInterval = null;
+function startQuizTimer(){
+  updateTimerDisplay();
+  quizTimerInterval = setInterval(()=>{
+    quizState.timeLeft--;
+    updateTimerDisplay();
+    if(quizState.timeLeft <= 0){
+      clearInterval(quizTimerInterval);
+      finishQuiz();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay(){
+  const t = quizState.timeLeft;
+  const h = String(Math.floor(t/3600)).padStart(2,'0');
+  const m = String(Math.floor((t%3600)/60)).padStart(2,'0');
+  const s = String(t%60).padStart(2,'0');
+  const el = document.getElementById('quizTimer');
+  el.textContent = `⏱ ${h}:${m}:${s}`;
+  el.classList.toggle('low', t <= 300);
+}
+
+function renderQuizQuestion(){
+  const q = quizState.list[quizState.idx];
+  const qMarks = q.marks!=null ? q.marks : 2;
+  const qNeg = q.negativeMarks!=null ? q.negativeMarks : 0.67;
+  document.getElementById('quizQText').innerHTML = `${quizState.idx+1}. ${q.question}` + (q.image ? `<br><img src="${q.image}" alt="question image" style="max-width:100%;border-radius:6px;margin-top:10px;">` : '');
+  document.getElementById('quizProgress').textContent = `प्रश्न ${quizState.idx+1} / ${quizState.list.length} — इस प्रश्न पर ${qMarks} अंक, गलत उत्तर पर ${qNeg} ऋणात्मक`;
+  const bmBtn = document.getElementById('bookmarkBtn');
+  const isBm = q.id && bookmarkedIds.has(q.id);
+  bmBtn.textContent = isBm ? '★' : '☆';
+  bmBtn.style.color = isBm ? 'var(--marigold)' : '';
+  const optsDiv = document.getElementById('quizOpts');
+  optsDiv.innerHTML = '';
+  const letters = ['A','B','C','D'];
+  q.options.forEach((opt, i)=>{
+    const b = document.createElement('button');
+    b.className = 'quiz-opt';
+    if(quizState.answers[quizState.idx] === i) b.classList.add('selected');
+    b.textContent = `${letters[i]}) ${opt}`;
+    b.onclick = ()=>selectAnswer(i);
+    optsDiv.appendChild(b);
+  });
+  const skipBtn = document.createElement('button');
+  skipBtn.className = 'quiz-opt';
+  skipBtn.style.opacity = '.8';
+  if(quizState.answers[quizState.idx] === -1) skipBtn.classList.add('selected');
+  skipBtn.textContent = 'E) अनुत्तरित प्रश्न';
+  skipBtn.onclick = ()=>selectAnswer(-1);
+  optsDiv.appendChild(skipBtn);
+  document.getElementById('prevBtn').disabled = quizState.idx === 0;
+  document.getElementById('nextBtn').style.visibility = quizState.idx === quizState.list.length-1 ? 'hidden' : 'visible';
+  renderQuizPalette();
+}
+
+function renderQuizPalette(){
+  const wrap = document.getElementById('quizPalette');
+  wrap.innerHTML = '<div class="quiz-palette-title">प्रश्न सूची</div>';
+  quizState.list.forEach((q,i)=>{
+    const answered = quizState.answers[i] !== null && quizState.answers[i] !== -1;
+    const b = document.createElement('button');
+    b.className = 'palette-btn ' + (answered ? 'attempted' : 'unattempted') + (i===quizState.idx ? ' current' : '');
+    b.textContent = i+1;
+    b.onclick = ()=>jumpToQuestion(i);
+    wrap.appendChild(b);
+  });
+}
+
+function jumpToQuestion(i){
+  quizState.idx = i;
+  renderQuizQuestion();
+}
+
+async function toggleBookmark(){
+  const user = auth.currentUser;
+  if(!user){ alert('कृपया पहले लॉगिन करें'); return; }
+  const q = quizState.list[quizState.idx];
+  if(!q || !q.id) return;
+  const isBm = bookmarkedIds.has(q.id);
+  try{
+    await db.collection('bookmarks').doc(user.uid).set({ [q.id]: !isBm }, {merge:true});
+  }catch(e){ console.error(e); }
+}
+
+async function reportQuestion(){
+  const user = auth.currentUser;
+  if(!user){ alert('कृपया पहले लॉगिन करें'); return; }
+  const q = quizState.list[quizState.idx];
+  if(!q) return;
+  const reason = prompt('इस सवाल में क्या गलती है? (जैसे: गलत उत्तर, गलत सवाल, टाइपिंग एरर)') ;
+  if(reason === null) return;
+  try{
+    await db.collection('reports').add({
+      questionId: q.id, category: q.category, section: q.section || '',
+      question: q.question, reason: reason.trim(), reporterEmail: user.email,
+      resolved: false, date: Date.now()
+    });
+    alert('रिपोर्ट भेज दी गई है, धन्यवाद! एडमिन जल्द इसे ठीक करेंगे।');
+  }catch(e){
+    console.error(e);
+    alert('रिपोर्ट भेजने में दिक्कत आई, दोबारा कोशिश करें।');
+  }
+}
+
+function selectAnswer(i){
+  quizState.answers[quizState.idx] = i;
+  renderQuizQuestion();
+}
+
+function nextQuestion(){
+  if(quizState.idx < quizState.list.length - 1){
+    quizState.idx++;
+    renderQuizQuestion();
+  }
+}
+
+function prevQuestion(){
+  if(quizState.idx > 0){
+    quizState.idx--;
+    renderQuizQuestion();
+  }
+}
+
+function confirmSubmitTest(){
+  const unanswered = quizState.answers.filter(a=>a===null || a===-1).length;
+  const msg = unanswered > 0
+    ? `${unanswered} सवाल अभी अनुत्तरित हैं। क्या आप फिर भी सबमिट करना चाहते हैं?`
+    : 'क्या आप टेस्ट सबमिट करना चाहते हैं?';
+  if(confirm(msg)) finishQuiz();
+}
+
+async function finishQuiz(){
+  if(quizTimerInterval) clearInterval(quizTimerInterval);
+  document.getElementById('quizBox').classList.remove('active');
+  clearTestHash(); // URL me se #test|... hata do, warna agli baar site kholte hi yehi test dobara start ho jaayega
+  // test-mode jaanbujhkar yahin ON rakhते हैं — result bhi usi focused/contained
+  // screen me dikhे, bahar header/nav/course-list wapas na aa jaaye
+  const list = quizState.list;
+  const answers = quizState.answers;
+  let correct = 0, wrong = 0, unattempted = 0, marks = 0;
+  list.forEach((q,i)=>{
+    const qMarks = q.marks!=null ? q.marks : 2;
+    const qNeg = q.negativeMarks!=null ? q.negativeMarks : 0.67;
+    if(answers[i] === null || answers[i] === -1){ unattempted++; }
+    else if(answers[i] === q.correct){ correct++; marks += qMarks; }
+    else { wrong++; marks -= qNeg; }
+  });
+  const attempted = correct + wrong;
+  const accuracy = attempted > 0 ? (correct / attempted * 100) : 0;
+  const totalSecs = getTestDurationSecs(quizState.category, list.length);
+  const timeTakenSecs = Math.max(0, totalSecs - quizState.timeLeft);
+  const timeTakenStr = `${String(Math.floor(timeTakenSecs/3600)).padStart(2,'0')}:${String(Math.floor((timeTakenSecs%3600)/60)).padStart(2,'0')}:${String(timeTakenSecs%60).padStart(2,'0')}`;
+  saveTestResult({category:quizState.category, correct, wrong, unattempted, marks, total:list.length, accuracy});
+  loadHistory(auth.currentUser);
+  const resultBox = document.getElementById('resultBox');
+  resultBox.classList.add('active');
+
+  let html = `
+    <div id="resultPrintArea">
+    <h3 style="font-size:22px;margin-bottom:18px;">${quizState.category} — परिणाम</h3>
+
+    <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:22px;">
+      <div class="acc-ring" style="--pct:${accuracy};">
+        <div class="acc-ring-inner">
+          <div class="acc-ring-num">${accuracy.toFixed(0)}%</div>
+          <div class="acc-ring-lbl">एक्यूरेसी</div>
+        </div>
+      </div>
+      <div id="rankBadge" class="rank-badge">रैंक लोड हो रही है...</div>
+    </div>
+
+    <div class="result-summary">
+      <div class="result-stat marks"><div class="num">${marks.toFixed(1)}</div><div class="lbl">कुल अंक</div></div>
+      <div class="result-stat correct"><div class="num">${correct}</div><div class="lbl">सही</div></div>
+      <div class="result-stat wrong"><div class="num">${wrong}</div><div class="lbl">गलत</div></div>
+      <div class="result-stat"><div class="num">${unattempted}</div><div class="lbl">अनुत्तरित</div></div>
+      <div class="result-stat" style="background:#e8eef7;"><div class="num" style="color:#1a3c6b;">${timeTakenStr}</div><div class="lbl">समय लगा</div></div>
+    </div>
+
+    <div class="review-tabs">
+      <button class="review-tab active" data-filter="all" onclick="filterReview('all')">सभी (${list.length})</button>
+      <button class="review-tab" data-filter="correct" onclick="filterReview('correct')">✓ सही (${correct})</button>
+      <button class="review-tab" data-filter="wrong" onclick="filterReview('wrong')">✗ गलत (${wrong})</button>
+      <button class="review-tab" data-filter="unattempted" onclick="filterReview('unattempted')">○ छूटे हुए (${unattempted})</button>
+    </div>
+    <div class="review-list">`;
+  list.forEach((q,i)=>{
+    const ua = answers[i];
+    let status = 'unattempted';
+    if(ua !== null && ua !== -1) status = (ua === q.correct) ? 'correct' : 'wrong';
+    html += `<div class="review-item" data-status="${status}"><div class="review-q">${i+1}. ${q.question}</div>`;
+    if(q.image) html += `<img src="${q.image}" alt="" style="max-width:100%;border-radius:6px;margin-bottom:10px;">`;
+    q.options.forEach((opt,oi)=>{
+      let cls = '';
+      if(oi === q.correct) cls = 'correct-answer';
+      if(ua === oi && ua !== q.correct) cls = 'your-wrong';
+      if(ua === oi && ua === q.correct) cls = 'your-correct';
+      html += `<div class="review-opt ${cls}">${opt}${oi===q.correct?' ✓':''}${ua===oi && ua!==q.correct?' ✗ (आपका उत्तर)':''}</div>`;
+    });
+    if(q.explanation){
+      html += `<div class="review-explain"><strong>व्याख्या:</strong> ${q.explanation}</div>`;
+    }
+    html += `</div>`;
+  });
+  html += `</div></div>
+    <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+      <button class="btn btn-primary" onclick="closeResult();">बंद करें</button>
+      <button class="btn btn-outline" style="color:var(--indigo-700);border-color:var(--indigo-700);" onclick="downloadResultPDF()">⬇ PDF डाउनलोड करें</button>
+    </div>`;
+  resultBox.innerHTML = html;
+  resultBox.scrollIntoView({behavior:'smooth', block:'start'});
+  loadRankForResult(quizState.category, marks);
+}
+
+async function loadRankForResult(category, myMarks){
+  const badge = document.getElementById('rankBadge');
+  if(!badge) return;
+  try{
+    const snap = await db.collection('results').where('category','==',category).get();
+    const byUser = {};
+    snap.docs.forEach(d=>{
+      const r = d.data();
+      if(byUser[r.uid] === undefined || r.marks > byUser[r.uid]) byUser[r.uid] = r.marks;
+    });
+    const allMarks = Object.values(byUser);
+    const total = allMarks.length || 1;
+    const better = allMarks.filter(m=>m > myMarks).length;
+    const rank = better + 1;
+    if(badge) badge.innerHTML = `🏅 <strong>रैंक #${rank}</strong> / ${total} विद्यार्थी`;
+  }catch(e){
+    console.error(e);
+    if(badge) badge.textContent = 'रैंक लोड नहीं हो पाई';
+  }
+}
+
+function filterReview(status){
+  document.querySelectorAll('.review-tab').forEach(b=>b.classList.toggle('active', b.dataset.filter===status));
+  document.querySelectorAll('.review-item').forEach(item=>{
+    item.style.display = (status==='all' || item.dataset.status===status) ? '' : 'none';
+  });
+}
+
+function closeResult(){
+  document.getElementById('resultBox').classList.remove('active');
+  document.body.classList.remove('test-mode');
+}
+
+function downloadResultPDF(){
+  document.body.classList.add('printing-result');
+  window.print();
+}
+window.addEventListener('afterprint', ()=> document.body.classList.remove('printing-result'));
+
+function exitQuizConfirm(){
+  const answered = quizState.answers.filter(a=>a!==null && a!==-1).length;
+  const msg = answered > 0
+    ? `आपने ${answered} सवाल हल किए हैं। अगर अभी वापस जाओगे तो ये टेस्ट सेव नहीं होगा। वापस जाना है?`
+    : 'क्या आप टेस्ट छोड़कर वापस जाना चाहते हैं?';
+  if(confirm(msg)) closeQuiz();
+}
+
+function closeQuiz(){
+  if(quizTimerInterval) clearInterval(quizTimerInterval);
+  document.getElementById('quizBox').classList.remove('active');
+  document.body.classList.remove('test-mode');
+  clearTestHash(); // URL me se #test|... hata do, warna agli baar site kholte hi yehi test dobara start ho jaayega
+  // Seedha category/section chooser pe wapas — taaki turant koi doosra subject (jaise GK) chun sake
+  document.getElementById('sectionPickerBox').classList.remove('active');
+  document.getElementById('catGrid').style.display = '';
+}
+
+function renderCA(){
+  const feed = document.getElementById('caFeed');
+  if(!feed) return; // Current Affairs section home page se hata di gayi hai
+  const sorted = [...currentAffairs].sort((a,b)=> new Date(b.date) - new Date(a.date));
+  feed.innerHTML = '';
+  if(sorted.length===0){ feed.innerHTML = '<div class="empty-note">अभी कोई करंट अफेयर्स नहीं जोड़ा गया।</div>'; return; }
+  const months = ['जन','फर','मार्च','अप्रै','मई','जून','जुल','अग','सित','अक्टू','नव','दिस'];
+  sorted.forEach(item=>{
+    const d = new Date(item.date);
+    const el = document.createElement('div');
+    el.className = 'ca-item';
+    el.innerHTML = `<div class="ca-date-seal"><span class="d">${d.getDate()}</span><span class="m">${months[d.getMonth()]}</span></div>
+      <div><h3>${item.title}</h3><p>${item.content}</p></div>`;
+    feed.appendChild(el);
+  });
+}
+
+/* ---------- FREE TEST SERIES — subject list on homepage (simple, no images) ---------- */
+function renderFreeSubjects(){
+  const grid = document.getElementById('freeSubjectsGrid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  CATEGORIES.concat(FREE_CATEGORIES).forEach(cat=>{
+    const card = document.createElement('div');
+    card.className = 'free-simple-row';
+    card.onclick = ()=> goToSubjectTest(cat);
+    card.innerHTML = `
+      <h3>${cat.replace(' MCQ','')}</h3>
+      <div class="meta">📄 ${categoryCountLabel(cat)}</div>
+      <button class="subject-card-start" onclick="event.stopPropagation(); goToSubjectTest('${cat.replace(/'/g,"\\'")}')">टेस्ट शुरू करें →</button>`;
+    grid.appendChild(card);
+  });
+}
+function goToSubjectTest(cat){
+  switchView('test');
+  chooseCategory(cat);
+}
+function updateStatsBand(){
+  const sSub = document.getElementById('statSubjects');
+  const sQ = document.getElementById('statQuestions');
+  const sCA = document.getElementById('statCA');
+  if(sSub) sSub.textContent = (CATEGORIES.length + FREE_CATEGORIES.length) + '+';
+  if(sQ) sQ.textContent = mcqs.length + '+';
+  if(sCA) sCA.textContent = currentAffairs.length + '+';
+}
+
+/* ---------- Admin ---------- */
+const ADMIN_EMAILS = ["jangid22111998@gmail.com"]; // apna admin email(s) yaha daalo, comma se aur bhi add kar sakte ho
+function updateAdminAccess(user){
+  const isAdmin = user && ADMIN_EMAILS.includes(user.email);
+  document.getElementById('adminOpenWrap').style.display = isAdmin ? 'block' : 'none';
+  if(isAdmin){
+    document.getElementById('adminGate').style.display='none';
+    document.getElementById('adminPanel').classList.add('active');
+  } else {
+    document.getElementById('adminGate').style.display='block';
+    document.getElementById('adminPanel').classList.remove('active');
+  }
+}
+
+function switchTab(id){
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.form-block').forEach(f=>f.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById(id).classList.add('active');
+  if(id === 'studentsTab') loadStudents();
+}
+
+function populateCategorySelect(){
+  const all = CATEGORIES.concat(FREE_CATEGORIES).concat(COURSES.map(c=>c.name));
+  const opts = all.map(c=>`<option value="${c}">${c}</option>`).join('');
+  document.getElementById('fCategory').innerHTML = opts;
+  document.getElementById('fBulkCategory').innerHTML = opts;
+  document.getElementById('fNoteCategory').innerHTML = opts;
+  updateSectionOptions('fSection','fSectionNew');
+  updateSectionOptions('fBulkSection','fBulkSectionNew');
+}
+
+// Diye gए category ke liye pehle se maujood sections dropdown me bhar deta hai,
+// taaki admin ko baar-baar section ka naam type na karna pade — bas select karo.
+function updateSectionOptions(selectId, newInputId){
+  const catSelect = selectId==='fBulkSection' ? document.getElementById('fBulkCategory') : document.getElementById('fCategory');
+  const cat = catSelect ? catSelect.value : '';
+  const existing = [...new Set(mcqs.filter(m=>m.category===cat && m.section).map(m=>m.section))].sort();
+  const sel = document.getElementById(selectId);
+  if(!sel) return;
+  const prevValue = sel.value;
+  sel.innerHTML = '<option value="">कोई सेक्शन नहीं</option>' +
+    existing.map(s=>`<option value="${s}">${s}</option>`).join('') +
+    '<option value="__new__">➕ नया सेक्शन जोड़ें</option>';
+  if(existing.includes(prevValue)) sel.value = prevValue;
+  document.getElementById(newInputId).style.display = 'none';
+  document.getElementById(newInputId).value = '';
+}
+
+function onSectionSelectChange(selectId, newInputId){
+  const sel = document.getElementById(selectId);
+  const newInput = document.getElementById(newInputId);
+  if(sel.value === '__new__'){
+    newInput.style.display = 'block';
+    newInput.focus();
+  } else {
+    newInput.style.display = 'none';
+    newInput.value = '';
+  }
+}
+
+function getSectionValue(selectId, newInputId){
+  const sel = document.getElementById(selectId);
+  if(sel.value === '__new__') return document.getElementById(newInputId).value.trim();
+  return sel.value;
+}
+
+function setMcqMode(mode){
+  document.getElementById('singleModeBtn').classList.toggle('active', mode==='single');
+  document.getElementById('bulkModeBtn').classList.toggle('active', mode==='bulk');
+  document.getElementById('mcqSingleMode').style.display = mode==='single' ? 'block' : 'none';
+  document.getElementById('mcqBulkMode').style.display = mode==='bulk' ? 'block' : 'none';
+}
+
+function parseBulkMCQ(text){
+  // Normalise line endings and split into lines.
+  const rawLines = text.replace(/\r\n/g,'\n').split('\n');
+
+  // A new question starts whenever we hit a line beginning with Q: / Q. / प्रश्न:
+  // This means users don't need to manually type "---" between questions —
+  // pasting straight from Word/PDF/WhatsApp (with blank lines between
+  // questions) now works too. "---" still works if someone already uses it.
+  const blocks = [];
+  let current = [];
+  rawLines.forEach(line=>{
+    const trimmed = line.trim();
+    if(/^---$/.test(trimmed)) return; // ignore old-style separators
+    if(/^(Q[.:]|प्रश्न[.:])/i.test(trimmed)){
+      if(current.length) blocks.push(current);
+      current = [trimmed];
+    } else if(trimmed){
+      current.push(trimmed);
+    }
+  });
+  if(current.length) blocks.push(current);
+
+  const parsed = [];
+  const errors = [];
+  blocks.forEach((lines, idx)=>{
+    let question='', options=['','','',''], correct=-1, explanation='';
+    let collectingQuestion = false; // "Match the following" jaise sawaalon me
+    // sawaal khud kai lines ka hota hai (jaise <ul><li>...</li></ul> wali list) —
+    // pehle sirf "Q:" wali pehli line hi li jaati thi, baaki lines chup-chaap
+    // chhoot jaati thi. Ab jab tak A)/B)/C)/D)/Ans na mile, saari lines sawaal
+    // me hi jud'ti jaayengi (naye line ke saath), taaki HTML list sahi bane.
+    lines.forEach(line=>{
+      if(/^(Q[.:]|प्रश्न[.:])/i.test(line)){ question = line.replace(/^(Q[.:]|प्रश्न[.:])/i,'').trim(); collectingQuestion = true; }
+      else if(/^A[).:-]/i.test(line)){ options[0] = line.replace(/^A[).:-]/i,'').trim(); collectingQuestion = false; }
+      else if(/^B[).:-]/i.test(line)){ options[1] = line.replace(/^B[).:-]/i,'').trim(); collectingQuestion = false; }
+      else if(/^C[).:-]/i.test(line)){ options[2] = line.replace(/^C[).:-]/i,'').trim(); collectingQuestion = false; }
+      else if(/^D[).:-]/i.test(line)){ options[3] = line.replace(/^D[).:-]/i,'').trim(); collectingQuestion = false; }
+      else if(/^(Correct|Ans(wer)?|उत्तर)[.:]/i.test(line)){
+        const val = line.replace(/^(Correct|Ans(wer)?|उत्तर)[.:]/i,'').trim().toUpperCase().charAt(0);
+        correct = {A:0,B:1,C:2,D:3}[val] ?? -1;
+        collectingQuestion = false;
+      }
+      else if(/^(Explanation|Exp|व्याख्या)[.:]/i.test(line)){ explanation = line.replace(/^(Explanation|Exp|व्याख्या)[.:]/i,'').trim(); collectingQuestion = false; }
+      else if(collectingQuestion && line){ question += '\n' + line; } // matching list ki agli lines yahan judti hain
+    });
+    if(!question || options.some(o=>!o) || correct===-1){
+      errors.push(`सवाल ${idx+1} में गलती है (Q/A/B/C/D/Ans चेक करें) — शुरुआत: "${(lines[0]||'').slice(0,40)}"`);
+    } else {
+      parsed.push({question, options, correct, explanation});
+    }
+  });
+  return {parsed, errors};
+}
+
+async function saveBulkMCQ(){
+  const category = document.getElementById('fBulkCategory').value;
+  const section = getSectionValue('fBulkSection','fBulkSectionNew');
+  const testNumberRaw = document.getElementById('fBulkTestNumber').value;
+  const testNumber = testNumberRaw ? parseInt(testNumberRaw) : null;
+  const text = document.getElementById('fBulkText').value.trim();
+  const errBox = document.getElementById('bulkPreviewErr');
+  errBox.textContent = '';
+  if(!text){ errBox.textContent = 'कृपया सवाल पेस्ट करें'; return; }
+  const {parsed, errors} = parseBulkMCQ(text);
+  if(errors.length){
+    errBox.innerHTML = errors.join('<br>');
+    if(parsed.length===0) return;
+  }
+
+  // Naya test number pehli baar bana hai ya nahi — agar pehli baar hai to use
+  // "Draft" rakhte hain, jab tak Admin khud publish na kare (see #6 folder view).
+  const isNewTest = !mcqs.some(m=>m.category===category && (m.testNumber||null)===(testNumber||null));
+
+  // Ek jaisa sawaal dobara na jud jaaye — same category+section+testNumber+question
+  // text wale sawaal chhod diye jaate hain (duplicate bug fix).
+  const existingKeys = new Set(mcqs.filter(m=>m.category===category && (m.testNumber||null)===(testNumber||null))
+    .map(m=>(m.question||'').trim().toLowerCase()));
+  const toInsert = [];
+  let skipped = 0;
+  parsed.forEach(q=>{
+    const k = q.question.trim().toLowerCase();
+    if(existingKeys.has(k)){ skipped++; return; }
+    existingKeys.add(k);
+    toInsert.push(q);
+  });
+
+  // Firestore batch write (max 500/batch) — much faster than one-by-one for big pastes.
+  for(let i=0;i<toInsert.length;i+=450){
+    const chunk = toInsert.slice(i,i+450);
+    const batch = db.batch();
+    chunk.forEach(q=>{
+      const ref = db.collection('mcqs').doc();
+      const newDoc = {category, section, testNumber, question:q.question, options:q.options, correct:q.correct, explanation:q.explanation, marks:2, negativeMarks:0.67, difficulty:'medium'};
+      batch.set(ref, newDoc);
+      mcqs.push({id:ref.id, ...newDoc});
+    });
+    await batch.commit();
+  }
+  if(isNewTest && toInsert.length){
+    const key = testPublishKey(category, testNumber);
+    await db.collection('testPublish').doc(key).set({category, testNumber: testNumber||null, published:false, updatedAt:Date.now()}, {merge:true});
+    testPublishMap[key] = {category, testNumber: testNumber||null, published:false};
+  }
+  document.getElementById('fBulkText').value = '';
+  document.getElementById('bulkSaveMsg').textContent = `✓ ${toInsert.length} सवाल सेव हो गए` + (skipped ? ` (${skipped} डुप्लीकेट सवाल छोड़ दिए गए)` : '') + (isNewTest ? ' — यह Draft में है, "प्रश्न सूची" में जाकर Publish करें' : '');
+  document.getElementById('bulkSaveMsg').style.display='inline';
+  setTimeout(()=>document.getElementById('bulkSaveMsg').style.display='none', 4000);
+  cacheSet('cache_mcqs', mcqs);
+  cacheSet('cache_pub', testPublishMap);
+  renderCategories();
+  renderFreeSubjects();
+  updateStatsBand();
+  renderCourses();
+  renderAdminLists();
+  updateSectionOptions('fBulkSection','fBulkSectionNew');
+  if(section) document.getElementById('fBulkSection').value = section;
+  // Note: yahan se turant notification nahi jaata — Admin "प्रश्न सूची" (folder view)
+  // se test ko khud "Publish" karega, tabhi students ko notification jaayega।
+}
+
+let editingMcqId = null;
+
+function editMCQ(id){
+  const m = mcqs.find(x=>x.id===id);
+  if(!m) return;
+  editingMcqId = id;
+  setMcqMode('single');
+  document.getElementById('fCategory').value = m.category;
+  updateSectionOptions('fSection','fSectionNew');
+  document.getElementById('fSection').value = m.section || '';
+  document.getElementById('fTestNumber').value = m.testNumber || '';
+  document.getElementById('fQuestion').value = m.question;
+  document.getElementById('fImage').value = m.image || '';
+  [0,1,2,3].forEach(i=>document.getElementById('fOpt'+i).value = m.options[i] || '');
+  document.querySelector(`input[name=correctOpt][value="${m.correct}"]`).checked = true;
+  document.getElementById('fMarks').value = (m.marks!=null ? m.marks : 2);
+  document.getElementById('fNegative').value = (m.negativeMarks!=null ? m.negativeMarks : 0.67);
+  document.getElementById('fDifficulty').value = m.difficulty || 'medium';
+  document.getElementById('fExplanation').value = m.explanation || '';
+  document.getElementById('mcqFormTitle').textContent = 'सवाल एडिट करें';
+  document.getElementById('mcqSaveBtn').textContent = 'बदलाव सेव करें';
+  document.getElementById('mcqCancelEditBtn').style.display = 'inline-block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function cancelEditMCQ(){
+  editingMcqId = null;
+  document.getElementById('fQuestion').value='';
+  document.getElementById('fImage').value='';
+  [0,1,2,3].forEach(i=>document.getElementById('fOpt'+i).value='');
+  updateSectionOptions('fSection','fSectionNew');
+  document.getElementById('fTestNumber').value='';
+  document.getElementById('fMarks').value='2';
+  document.getElementById('fNegative').value='0.67';
+  document.getElementById('fDifficulty').value='medium';
+  document.getElementById('fExplanation').value='';
+  document.getElementById('mcqFormTitle').textContent = 'नया सवाल जोड़ें';
+  document.getElementById('mcqSaveBtn').textContent = 'MCQ सेव करें';
+  document.getElementById('mcqCancelEditBtn').style.display = 'none';
+}
+
+async function saveMCQ(){
+  const category = document.getElementById('fCategory').value;
+  const section = getSectionValue('fSection','fSectionNew');
+  const testNumberRaw = document.getElementById('fTestNumber').value;
+  const testNumber = testNumberRaw ? parseInt(testNumberRaw) : null;
+  const question = document.getElementById('fQuestion').value.trim();
+  const image = document.getElementById('fImage').value.trim();
+  const opts = [0,1,2,3].map(i=>document.getElementById('fOpt'+i).value.trim());
+  const correct = parseInt(document.querySelector('input[name=correctOpt]:checked').value);
+  const marksRaw = parseFloat(document.getElementById('fMarks').value);
+  const negRaw = parseFloat(document.getElementById('fNegative').value);
+  const marks = isNaN(marksRaw) ? 2 : marksRaw;
+  const negativeMarks = isNaN(negRaw) ? 0.67 : negRaw;
+  const difficulty = document.getElementById('fDifficulty').value;
+  const explanation = document.getElementById('fExplanation').value.trim();
+  if(!question || opts.some(o=>!o)){ alert('कृपया सवाल और सभी विकल्प भरें'); return; }
+  const newDoc = {category, section, testNumber, question, image, options:opts, correct, marks, negativeMarks, difficulty, explanation};
+
+  if(editingMcqId){
+    await db.collection('mcqs').doc(editingMcqId).set(newDoc, {merge:true});
+    const idx = mcqs.findIndex(x=>x.id===editingMcqId);
+    if(idx>-1) mcqs[idx] = {id:editingMcqId, ...newDoc};
+    cancelEditMCQ();
+  } else {
+    // Ek jaisa sawaal dobara na jud jaaye (duplicate bug fix)
+    const dupe = mcqs.some(m=>m.category===category && (m.testNumber||null)===(testNumber||null) && (m.question||'').trim().toLowerCase()===question.toLowerCase());
+    if(dupe){ alert('यह सवाल इसी टेस्ट में पहले से मौजूद है — दोबारा नहीं जोड़ा गया।'); return; }
+    const isNewTest = !mcqs.some(m=>m.category===category && (m.testNumber||null)===(testNumber||null));
+    const ref = await db.collection('mcqs').add(newDoc);
+    mcqs.push({id:ref.id, ...newDoc});
+    if(isNewTest && testNumber){
+      const key = testPublishKey(category, testNumber);
+      await db.collection('testPublish').doc(key).set({category, testNumber, published:false, updatedAt:Date.now()}, {merge:true});
+      testPublishMap[key] = {category, testNumber, published:false};
+    }
+    // Note: har single sawaal ke liye notification nahi bhejte (spam se bachne ke liye).
+    // Naya test number "प्रश्न सूची" folder se Admin khud Publish karega, tabhi students ko dikhega aur notification jaayega।
+  }
+
+  // Sirf question/options/explanation clear karte hain — topic (category) aur section
+  // jaanbujhkar selected reh jaate hain, taaki isi topic/section me agla sawaal turant add kar sakein।
+  document.getElementById('fQuestion').value='';
+  document.getElementById('fImage').value='';
+  [0,1,2,3].forEach(i=>document.getElementById('fOpt'+i).value='');
+  document.getElementById('fExplanation').value='';
+  document.getElementById('mcqSaveMsg').style.display='inline';
+  setTimeout(()=>document.getElementById('mcqSaveMsg').style.display='none', 1800);
+  document.getElementById('fQuestion').focus();
+  cacheSet('cache_mcqs', mcqs);
+  cacheSet('cache_pub', testPublishMap);
+  renderCategories();
+  renderFreeSubjects();
+  updateStatsBand();
+  renderCourses();
+  renderAdminLists();
+  updateSectionOptions('fSection','fSectionNew');
+  if(section) document.getElementById('fSection').value = section;
+}
+
+async function saveCA(){
+  const date = document.getElementById('fCaDate').value || new Date().toISOString().slice(0,10);
+  const title = document.getElementById('fCaTitle').value.trim();
+  const content = document.getElementById('fCaContent').value.trim();
+  if(!title || !content){ alert('कृपया शीर्षक और विवरण भरें'); return; }
+  const newDoc = {date, title, content};
+  const ref = await db.collection('currentAffairs').add(newDoc);
+  currentAffairs.push({id:ref.id, ...newDoc});
+  cacheSet('cache_ca', currentAffairs);
+  document.getElementById('fCaTitle').value='';
+  document.getElementById('fCaContent').value='';
+  document.getElementById('caSaveMsg').style.display='inline';
+  setTimeout(()=>document.getElementById('caSaveMsg').style.display='none', 1800);
+  renderCA();
+  renderAdminLists();
+  postAutoAnnouncement('नई करंट अफेयर्स पोस्ट', title);
+}
+
+/* ---------- NOTES (PDF) ---------- */
+async function uploadNote(){
+  const category = document.getElementById('fNoteCategory').value;
+  const title = document.getElementById('fNoteTitle').value.trim();
+  const fileInput = document.getElementById('fNoteFile');
+  const file = fileInput.files[0];
+  if(!title || !file){ alert('कृपया नाम लिखें और PDF फाइल चुनें'); return; }
+  if(file.type !== 'application/pdf'){ alert('कृपया सिर्फ PDF फाइल चुनें'); return; }
+  const MAX_PDF_SIZE = 100 * 1024 * 1024; // 100MB
+  if(file.size > MAX_PDF_SIZE){ alert('फाइल का साइज़ 100MB से ज़्यादा है। कृपया छोटी फाइल चुनें।'); return; }
+  const btn = document.getElementById('noteUploadBtn');
+  btn.disabled = true;
+  btn.textContent = 'अपलोड हो रहा है...';
+  try{
+    const path = `notes/${Date.now()}_${file.name}`;
+    const ref = storage.ref().child(path);
+    await ref.put(file);
+    const url = await ref.getDownloadURL();
+    const newDoc = {category, title, url, path, uploadedAt: Date.now()};
+    const docRef = await db.collection('notes').add(newDoc);
+    notes.push({id:docRef.id, ...newDoc});
+    cacheSet('cache_notes', notes);
+    document.getElementById('fNoteTitle').value = '';
+    fileInput.value = '';
+    document.getElementById('noteSaveMsg').style.display = 'inline';
+    setTimeout(()=>document.getElementById('noteSaveMsg').style.display='none', 2000);
+    renderAdminLists();
+    postAutoAnnouncement('नए नोट्स जोड़े गए', `"${category}" में "${title}" नोट्स PDF अपलोड हुई है — अभी डाउनलोड करें।`);
+  }catch(e){
+    console.error(e);
+    alert('अपलोड नहीं हो पाया, दोबारा कोशिश करें।');
+  }
+  btn.disabled = false;
+  btn.textContent = 'PDF अपलोड करें';
+}
+
+async function deleteNote(id){
+  const n = notes.find(x=>x.id===id);
+  if(!n) return;
+  try{
+    if(n.path) await storage.ref().child(n.path).delete();
+  }catch(e){ console.error(e); }
+  await db.collection('notes').doc(id).delete();
+  notes = notes.filter(x=>x.id!==id);
+  cacheSet('cache_notes', notes);
+  renderAdminLists();
+  renderNotesList(currentNotesCategory);
+}
+
+let currentNotesCategory = null;
+function renderNotesList(category){
+  currentNotesCategory = category;
+  const panel = document.getElementById('notesPanel');
+  const list = notes.filter(n=>n.category===category);
+  if(list.length===0){ panel.innerHTML=''; return; }
+  panel.innerHTML = `<div style="background:var(--paper);border-radius:6px;padding:16px 18px;margin-bottom:18px;">
+    <h4 style="color:var(--ink);font-size:15px;margin-bottom:10px;">📄 नोट्स — ${category}</h4>
+    ${list.map(n=>`<a href="${n.url}" download="${n.title}.pdf" target="_blank" style="display:flex;justify-content:space-between;align-items:center;background:var(--sand-light);border-radius:4px;padding:10px 14px;margin-bottom:8px;text-decoration:none;color:var(--ink);font-size:14px;">
+      <span>📥 ${n.title}</span><span style="color:var(--marigold-dark);font-weight:600;font-size:13px;">डाउनलोड करें</span>
+    </a>`).join('')}
+  </div>`;
+}
+
+function renderReportsList(reports){
+  const list = document.getElementById('reportsList');
+  if(!list) return;
+  if(reports.length === 0){
+    list.innerHTML = '<p class="empty-note">अभी कोई रिपोर्ट नहीं है।</p>';
+    return;
+  }
+  const sorted = reports.slice().sort((a,b)=>b.date-a.date);
+  list.innerHTML = '';
+  sorted.forEach(r=>{
+    const row = document.createElement('div');
+    row.className = 'exist-row';
+    row.style.flexDirection = 'column';
+    row.style.alignItems = 'stretch';
+    const d = new Date(r.date).toLocaleDateString('hi-IN', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'});
+    row.innerHTML = `<div style="margin-bottom:8px;">
+        <strong style="color:var(--marigold);">${r.category}${r.section?' — '+r.section:''}</strong><br>
+        <span style="font-size:13px;">${r.question.slice(0,90)}${r.question.length>90?'...':''}</span><br>
+        <span style="font-size:12px;color:var(--ink-red);">वजह: ${r.reason || 'कोई कारण नहीं दिया'}</span><br>
+        <span style="font-size:11px;opacity:.6;">${r.reporterEmail} • ${d}</span>
+      </div>`;
+    const btnWrap = document.createElement('div');
+    btnWrap.style.display = 'flex';
+    btnWrap.style.gap = '6px';
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'सवाल एडिट करें';
+    editBtn.style.background = 'var(--indigo-700)';
+    editBtn.onclick = ()=>{ switchTab('mcqTab'); editMCQ(r.questionId); };
+    const resolveBtn = document.createElement('button');
+    resolveBtn.textContent = 'हल हो गया';
+    resolveBtn.style.background = '#3f9142';
+    resolveBtn.onclick = ()=> resolveReport(r.id);
+    btnWrap.appendChild(editBtn);
+    btnWrap.appendChild(resolveBtn);
+    row.appendChild(btnWrap);
+    list.appendChild(row);
+  });
+}
+
+async function resolveReport(id){
+  await db.collection('reports').doc(id).update({resolved:true});
+}
+
+// Bulk-select-delete: admin ek saath kai sawaal select karke ek hi click me
+// sabko delete kar sakta hai, ek-ek karke delete karne ki zaroorat nahi.
+let selectedMcqIds = new Set();
+
+function buildMcqAdminRow(m){
+  const row = document.createElement('div');
+  row.className = 'exist-row';
+  const chk = document.createElement('input');
+  chk.type = 'checkbox';
+  chk.className = 'mcq-row-chk';
+  chk.style.marginRight = '10px';
+  chk.style.flexShrink = '0';
+  chk.checked = selectedMcqIds.has(m.id);
+  chk.onchange = ()=>{
+    if(chk.checked) selectedMcqIds.add(m.id); else selectedMcqIds.delete(m.id);
+    updateMcqBulkDeleteBar();
+  };
+  const label = document.createElement('span');
+  label.textContent = `${m.question.slice(0,50)}${m.question.length>50?'...':''}`;
+  const leftWrap = document.createElement('div');
+  leftWrap.style.display = 'flex';
+  leftWrap.style.alignItems = 'center';
+  leftWrap.appendChild(chk);
+  leftWrap.appendChild(label);
+  row.appendChild(leftWrap);
+  const btnWrap = document.createElement('div');
+  btnWrap.style.display = 'flex';
+  btnWrap.style.gap = '6px';
+  const editBtn = document.createElement('button');
+  editBtn.textContent = 'एडिट';
+  editBtn.style.background = 'var(--indigo-700)';
+  editBtn.onclick = ()=> editMCQ(m.id);
+  const delBtn = document.createElement('button');
+  delBtn.textContent = 'हटाएं';
+  delBtn.onclick = async ()=>{ await db.collection('mcqs').doc(m.id).delete(); mcqs = mcqs.filter(x=>x.id!==m.id); selectedMcqIds.delete(m.id); cacheSet('cache_mcqs', mcqs); renderCategories(); renderFreeSubjects(); updateStatsBand(); renderCourses(); renderAdminLists(); };
+  btnWrap.appendChild(editBtn);
+  btnWrap.appendChild(delBtn);
+  row.appendChild(btnWrap);
+  return row;
+}
+
+function updateMcqBulkDeleteBar(){
+  const bar = document.getElementById('mcqBulkDeleteBar');
+  const countEl = document.getElementById('mcqBulkDeleteCount');
+  if(!bar || !countEl) return;
+  const n = selectedMcqIds.size;
+  countEl.textContent = n + ' सवाल चुने गए';
+  bar.style.display = n > 0 ? 'flex' : 'none';
+  const selectAllChk = document.getElementById('mcqSelectAllChk');
+  if(selectAllChk && n === 0) selectAllChk.checked = false;
+}
+
+function toggleSelectAllMCQs(checked){
+  document.querySelectorAll('#mcqList .mcq-row-chk').forEach(chk=>{
+    chk.checked = checked;
+    chk.dispatchEvent(new Event('change'));
+  });
+}
+
+function clearMcqSelection(){
+  selectedMcqIds.clear();
+  document.querySelectorAll('#mcqList .mcq-row-chk').forEach(chk=> chk.checked = false);
+  const selectAllChk = document.getElementById('mcqSelectAllChk');
+  if(selectAllChk) selectAllChk.checked = false;
+  updateMcqBulkDeleteBar();
+}
+
+async function bulkDeleteSelectedMCQs(){
+  const ids = [...selectedMcqIds];
+  if(ids.length === 0) return;
+  if(!confirm(`क्या आप वाकई ${ids.length} चुने हुए सवाल हटाना चाहते हैं? यह पूर्ववत नहीं हो सकता।`)) return;
+  const batchSize = 400; // Firestore batch limit se bachne ke liye chunks me delete
+  for(let i=0; i<ids.length; i+=batchSize){
+    const chunk = ids.slice(i, i+batchSize);
+    const batch = db.batch();
+    chunk.forEach(id=> batch.delete(db.collection('mcqs').doc(id)));
+    await batch.commit();
+  }
+  mcqs = mcqs.filter(x=> !selectedMcqIds.has(x.id));
+  selectedMcqIds.clear();
+  cacheSet('cache_mcqs', mcqs);
+  renderCategories(); renderFreeSubjects(); updateStatsBand(); renderCourses(); renderAdminLists();
+}
+
+// Poori category (folder) ka naam badalna — sabhi sawaalon ka category field
+// update ho jaata hai. Purane testPublish records (agar the) naye naam ke
+// saath dobara link nahi hote, isliye rename ke baad naye tests fir se
+// publish karna pad sakta hai.
+async function renameCategory(oldName){
+  const newName = prompt('इस केटेगरी का नया नाम डालें:', oldName);
+  if(!newName || !newName.trim() || newName.trim() === oldName) return;
+  const trimmed = newName.trim();
+  const affected = mcqs.filter(m=>m.category===oldName);
+  if(affected.length === 0) return;
+  if(!confirm(`"${oldName}" के सभी ${affected.length} सवालों को "${trimmed}" में बदलें?`)) return;
+  const batchSize = 400;
+  for(let i=0; i<affected.length; i+=batchSize){
+    const chunk = affected.slice(i, i+batchSize);
+    const batch = db.batch();
+    chunk.forEach(m=> batch.update(db.collection('mcqs').doc(m.id), {category: trimmed}));
+    await batch.commit();
+  }
+  mcqs.forEach(m=>{ if(m.category===oldName) m.category = trimmed; });
+  cacheSet('cache_mcqs', mcqs);
+  renderCategories(); renderFreeSubjects(); updateStatsBand(); renderCourses(); renderAdminLists();
+}
+
+// Poori category (folder) ke saare sawaal ek saath delete karna
+async function deleteCategory(cat){
+  const affected = mcqs.filter(m=>m.category===cat);
+  if(affected.length === 0) return;
+  if(!confirm(`⚠️ क्या आप वाकई "${cat}" केटेगरी के सभी ${affected.length} सवाल हटाना चाहते हैं? यह पूर्ववत नहीं हो सकता।`)) return;
+  const ids = affected.map(m=>m.id);
+  const batchSize = 400;
+  for(let i=0; i<ids.length; i+=batchSize){
+    const chunk = ids.slice(i, i+batchSize);
+    const batch = db.batch();
+    chunk.forEach(id=> batch.delete(db.collection('mcqs').doc(id)));
+    await batch.commit();
+  }
+  mcqs = mcqs.filter(m=>m.category!==cat);
+  ids.forEach(id=> selectedMcqIds.delete(id));
+  cacheSet('cache_mcqs', mcqs);
+  renderCategories(); renderFreeSubjects(); updateStatsBand(); renderCourses(); renderAdminLists();
+}
+
+function renderAdminLists(){
+  const mcqList = document.getElementById('mcqList');
+  // Jo MCQ delete ho chuke hain unko selection se hata do
+  const liveIds = new Set(mcqs.map(m=>m.id));
+  [...selectedMcqIds].forEach(id=>{ if(!liveIds.has(id)) selectedMcqIds.delete(id); });
+  mcqList.innerHTML = '<p style="font-size:13px;color:var(--sand);margin-bottom:10px;">कुल MCQ: '+mcqs.length+' · टेस्ट नंबर वाले फोल्डर में नीचे 📄 Publish बटन से सबको दिखाएं</p>';
+
+  const categories = [...new Set(mcqs.map(m=>m.category))].sort();
+
+  categories.forEach(cat=>{
+    const catQs = mcqs.filter(m=>m.category===cat);
+    const folder = document.createElement('details');
+    folder.style.cssText = 'margin-bottom:10px;background:var(--indigo-800);border:1px solid rgba(232,163,61,0.15);border-radius:6px;padding:10px 14px;';
+    const summary = document.createElement('summary');
+    summary.style.cssText = 'cursor:pointer;font-weight:600;color:var(--marigold);font-size:14.5px;';
+    summary.textContent = `📁 ${cat} (${catQs.length})`;
+    folder.appendChild(summary);
+
+    // Poori category (folder) ke level par select-all, delete aur rename options
+    const catToolbar = document.createElement('div');
+    catToolbar.style.cssText = 'display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0;padding:8px 10px;background:rgba(0,0,0,0.15);border-radius:5px;';
+    const catSelectLabel = document.createElement('label');
+    catSelectLabel.style.cssText = 'display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--sand-light);cursor:pointer;';
+    const catAllSelected = catQs.length>0 && catQs.every(m=>selectedMcqIds.has(m.id));
+    catSelectLabel.innerHTML = `<input type="checkbox" ${catAllSelected?'checked':''}> इस केटेगरी के सभी सवाल चुनें`;
+    catSelectLabel.querySelector('input').onchange = (e)=>{
+      catQs.forEach(m=>{ if(e.target.checked) selectedMcqIds.add(m.id); else selectedMcqIds.delete(m.id); });
+      renderAdminLists();
+    };
+    const catRenameBtn = document.createElement('button');
+    catRenameBtn.textContent = '✏️ नाम बदलें';
+    catRenameBtn.style.cssText = 'background:var(--indigo-700);color:#fff;border:none;padding:6px 12px;border-radius:3px;font-size:12px;cursor:pointer;';
+    catRenameBtn.onclick = ()=> renameCategory(cat);
+    const catDeleteBtn = document.createElement('button');
+    catDeleteBtn.textContent = '🗑 पूरी केटेगरी हटाएं';
+    catDeleteBtn.style.cssText = 'background:var(--ink-red);color:#fff;border:none;padding:6px 12px;border-radius:3px;font-size:12px;cursor:pointer;';
+    catDeleteBtn.onclick = ()=> deleteCategory(cat);
+    catToolbar.appendChild(catSelectLabel);
+    catToolbar.appendChild(catRenameBtn);
+    catToolbar.appendChild(catDeleteBtn);
+    folder.appendChild(catToolbar);
+
+    // Test-number wale folder — bilkul test-series jaisa, saath me Publish/Draft control
+    const testNumbers = [...new Set(catQs.filter(m=>m.testNumber).map(m=>m.testNumber))].sort((a,b)=>a-b);
+    testNumbers.forEach(tn=>{
+      const qs = catQs.filter(m=>m.testNumber===tn);
+      const published = isTestPublished(cat, tn);
+      const testWrap = document.createElement('div');
+      testWrap.style.cssText = 'margin-top:10px;padding-left:10px;border-left:2px solid var(--marigold);';
+      const head = document.createElement('div');
+      head.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap;';
+      const titleSpan = document.createElement('span');
+      titleSpan.style.cssText = 'font-size:13px;color:var(--sand);font-weight:600;';
+      titleSpan.innerHTML = `📄 Test ${String(tn).padStart(2,'0')} (${qs.length}) <span class="tf-pub-badge ${published?'pub':'draft'}">${published?'✓ Public':'🔒 Draft'}</span>`;
+      const pubBtn = document.createElement('button');
+      pubBtn.textContent = published ? 'Unpublish करें' : 'Publish करें';
+      pubBtn.style.cssText = `background:${published?'#8a6b1f':'#3f9142'};color:#fff;border:none;padding:5px 10px;border-radius:3px;font-size:11.5px;cursor:pointer;`;
+      pubBtn.onclick = ()=> toggleTestPublish(cat, tn);
+      head.appendChild(titleSpan);
+      head.appendChild(pubBtn);
+      testWrap.appendChild(head);
+      qs.slice().reverse().forEach(m=> testWrap.appendChild(buildMcqAdminRow(m)));
+      folder.appendChild(testWrap);
+    });
+
+    // Test-number ke bina wale sawaal — section ke hisaab se folder
+    const untaggedQs = catQs.filter(m=>!m.testNumber);
+    const bySec = {};
+    untaggedQs.forEach(m=>{
+      const sec = m.section || 'बिना सेक्शन';
+      if(!bySec[sec]) bySec[sec] = [];
+      bySec[sec].push(m);
+    });
+    Object.keys(bySec).sort().forEach(sec=>{
+      const secWrap = document.createElement('div');
+      secWrap.style.cssText = 'margin-top:10px;padding-left:10px;border-left:2px solid var(--marigold);';
+      const secTitle = document.createElement('div');
+      secTitle.style.cssText = 'font-size:13px;color:var(--sand);margin-bottom:6px;font-weight:600;';
+      secTitle.textContent = `📂 ${sec} (${bySec[sec].length})`;
+      secWrap.appendChild(secTitle);
+      bySec[sec].slice().reverse().forEach(m=> secWrap.appendChild(buildMcqAdminRow(m)));
+      folder.appendChild(secWrap);
+    });
+
+    mcqList.appendChild(folder);
+  });
+  updateMcqBulkDeleteBar();
+
+  const caList = document.getElementById('caList');
+  caList.innerHTML = '<p style="font-size:13px;color:var(--sand);margin-bottom:10px;">कुल पोस्ट: '+currentAffairs.length+'</p>';
+  currentAffairs.slice().reverse().forEach(c=>{
+    const row = document.createElement('div');
+    row.className = 'exist-row';
+    row.innerHTML = `<span>${c.title} <em style="opacity:.6">(${c.date})</em></span>`;
+    const btn = document.createElement('button');
+    btn.textContent = 'हटाएं';
+    btn.onclick = async ()=>{ await db.collection('currentAffairs').doc(c.id).delete(); currentAffairs = currentAffairs.filter(x=>x.id!==c.id); cacheSet('cache_ca', currentAffairs); renderCA(); renderAdminLists(); };
+    row.appendChild(btn);
+    caList.appendChild(row);
+  });
+
+  const notesList = document.getElementById('notesAdminList');
+  notesList.innerHTML = '<p style="font-size:13px;color:var(--sand);margin-bottom:10px;">कुल नोट्स: '+notes.length+'</p>';
+  notes.slice().reverse().forEach(n=>{
+    const row = document.createElement('div');
+    row.className = 'exist-row';
+    row.innerHTML = `<span>${n.title} <em style="opacity:.6">(${n.category})</em></span>`;
+    const btn = document.createElement('button');
+    btn.textContent = 'हटाएं';
+    btn.onclick = ()=> deleteNote(n.id);
+    row.appendChild(btn);
+    notesList.appendChild(row);
+  });
+}
+
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('sw.js').catch(e=>console.log('SW registration failed', e));
+  });
+}
+
+/* ---------- PUSH NOTIFICATIONS ---------- */
+// Ek baar login ke baad browser permission maangega. "इजाज़त दें" click karne par
+// device topic "all_users" se जुड़ जाएगा — admin panel se bheja gaya notification sabko जाएगा.
+async function setupPushNotifications(){
+  if(!('Notification' in window) || !('serviceWorker' in navigator)) return;
+  if(localStorage.getItem('pushDeclined') === '1') return; // user ne pehle mana kiya tha, dobara mat pucho
+
+  try{
+    const swReg = await navigator.serviceWorker.register('firebase-messaging-sw.js');
+    let permission = Notification.permission;
+    if(permission === 'default'){
+      permission = await Notification.requestPermission();
+    }
+    if(permission !== 'granted'){
+      localStorage.setItem('pushDeclined', '1');
+      return;
+    }
+    const messaging = firebase.messaging();
+    // Firebase Console > Project Settings > Cloud Messaging > Web Push certificates se ye key lo
+    const VAPID_KEY = "YOUR_VAPID_KEY_HERE";
+    const token = await messaging.getToken({ vapidKey: VAPID_KEY, serviceWorkerRegistration: swReg });
+    if(token){
+      const subscribe = functionsClient.httpsCallable('subscribeToNotifications');
+      await subscribe({ token });
+    }
+  }catch(e){
+    console.log('Push notification setup skipped:', e.message);
+  }
+}
+</script>
+</body>
+</html>
