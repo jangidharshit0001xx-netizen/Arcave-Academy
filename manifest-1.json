@@ -1,0 +1,40 @@
+{
+  "name": "Arcave Academy | RSSB, RPSC व राजस्थान परीक्षा तैयारी",
+  "short_name": "Arcave Academy",
+  "description": "RSSB LDC, RPSC और राजस्थान की सभी प्रतियोगी परीक्षाओं की तैयारी — मुफ्त MCQ टेस्ट, करंट अफेयर्स और प्रीमियम कोर्स।",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0d2b28",
+  "theme_color": "#0d2b28",
+  "lang": "hi-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
